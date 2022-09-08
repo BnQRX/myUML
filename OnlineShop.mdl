@@ -1,0 +1,3520 @@
+
+(object Petal
+    version    	42
+    _written   	"Rose 4.7349.B"
+    charSet    	204)
+
+(object Design "Logical View"
+    is_unit    	TRUE
+    is_loaded  	TRUE
+    defaults   	(object defaults
+	rightMargin 	0.000000
+	leftMargin 	0.000000
+	topMargin  	0.000000
+	bottomMargin 	0.000000
+	pageOverlap 	0.000000
+	clipIconLabels 	TRUE
+	autoResize 	TRUE
+	snapToGrid 	FALSE
+	gridX      	3
+	gridY      	3
+	defaultFont 	(object Font
+	    size       	12
+	    face       	"Arial"
+	    charSet    	204
+	    bold       	FALSE
+	    italics    	FALSE
+	    underline  	FALSE
+	    strike     	FALSE
+	    color      	0
+	    default_color 	TRUE)
+	showMessageNum 	3
+	showClassOfObject 	TRUE
+	notation   	"Unified")
+    root_usecase_package 	(object Class_Category "Use Case View"
+	quid       	"513E8E3202FF"
+	exportControl 	"Public"
+	global     	TRUE
+	logical_models 	(list unit_reference_list
+	    (object Class "Покупатель"
+		quid       	"513E8E8803BE"
+		stereotype 	"Actor")
+	    (object Class "Постоянный покупатель"
+		quid       	"513E8E8B004E"
+		stereotype 	"Actor"
+		superclasses 	(list inheritance_relationship_list
+		    (object Inheritance_Relationship
+			quid       	"513E8FFB031C"
+			supplier   	"Use Case View::Покупатель"
+			quidu      	"513E8E8803BE")))
+	    (object Class "Форма товара"
+		quid       	"513E919F03A8"
+		stereotype 	"Interface")
+	    (object Class "Форма поиска"
+		quid       	"513E94F6014B"
+		stereotype 	"Interface")
+	    (object Class "Форма ввода и вывода"
+		quid       	"513E95410142"
+		stereotype 	"Interface")
+	    (object Class "Форма доставки"
+		quid       	"513E9565029C"
+		stereotype 	"Interface")
+	    (object Class "Форма для оплаты"
+		quid       	"513E95790013"
+		stereotype 	"Interface")
+	    (object UseCase "Заказать товары"
+		quid       	"513E8E9E0215"
+		external_docs 	(list external_doc_list
+		    (object external_doc
+			external_doc_path 	"C:\\Users\\Admin\\Desktop\\УНИВЕР\\4 СЕМЕСТР\\Zharikov\\Order.doc")))
+	    (object UseCase "Указать необходимые сопроводительные документы"
+		quid       	"513E8EA00226")
+	    (object UseCase "Указать личные данные покупателя"
+		quid       	"513E8EA2003E")
+	    (object UseCase "Выбрать способ оплаты"
+		quid       	"513E8EA700FE")
+	    (object UseCase "Указать условия доставки"
+		quid       	"513E8EA803CF")
+	    (object UseCase "Наполнить виртуальную корзину"
+		quid       	"513E8EAA0326")
+	    (object UseCase "Удалить товар из корзины"
+		quid       	"513E8EAC02B5")
+	    (object UseCase "Выбрать товар из каталога в корзине"
+		quid       	"513E8EAE036E")
+	    (object UseCase "Сортировка товаров в каталоге"
+		quid       	"513E8EB0019D")
+	    (object UseCase "Посмотреть свойства товара"
+		quid       	"513E8EB403D6")
+	    (object UseCase "Поиск товара по различным параметрам"
+		quid       	"513E8EB60376")
+	    (object UseCase "Расчитать скидку"
+		quid       	"515E883F0233")
+	    (object Association "$UNNAMED$0"
+		quid       	"513E900901B4"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$1"
+			quid       	"513E900A01EC"
+			supplier   	"Use Case View::Заказать товары"
+			quidu      	"513E8E9E0215"
+			client_cardinality 	(value cardinality "1..n")
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$2"
+			quid       	"513E900A01ED"
+			supplier   	"Use Case View::Покупатель"
+			quidu      	"513E8E8803BE")))
+	    (object Association "$UNNAMED$3"
+		quid       	"513E901801B4"
+		stereotype 	"include"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$4"
+			quid       	"513E90190124"
+			supplier   	"Use Case View::Указать необходимые сопроводительные документы"
+			quidu      	"513E8EA00226"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$5"
+			quid       	"513E90190125"
+			supplier   	"Use Case View::Заказать товары"
+			quidu      	"513E8E9E0215")))
+	    (object Association "$UNNAMED$6"
+		quid       	"513E903303E4"
+		stereotype 	"include"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$7"
+			quid       	"513E903402F4"
+			supplier   	"Use Case View::Указать условия доставки"
+			quidu      	"513E8EA803CF"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$8"
+			quid       	"513E903402F5"
+			supplier   	"Use Case View::Заказать товары"
+			quidu      	"513E8E9E0215")))
+	    (object Association "$UNNAMED$9"
+		quid       	"513E904302EB"
+		stereotype 	"include"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$10"
+			quid       	"513E90440104"
+			supplier   	"Use Case View::Выбрать способ оплаты"
+			quidu      	"513E8EA700FE"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$11"
+			quid       	"513E90440105"
+			supplier   	"Use Case View::Заказать товары"
+			quidu      	"513E8E9E0215")))
+	    (object Association "$UNNAMED$12"
+		quid       	"513E904B002C"
+		stereotype 	"include"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$13"
+			quid       	"513E904B028C"
+			supplier   	"Use Case View::Указать личные данные покупателя"
+			quidu      	"513E8EA2003E"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$14"
+			quid       	"513E904B028D"
+			supplier   	"Use Case View::Заказать товары"
+			quidu      	"513E8E9E0215")))
+	    (object Association "$UNNAMED$15"
+		quid       	"513E90530363"
+		stereotype 	"include"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$16"
+			quid       	"513E90540333"
+			supplier   	"Use Case View::Наполнить виртуальную корзину"
+			quidu      	"513E8EAA0326"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$17"
+			quid       	"513E90540334"
+			supplier   	"Use Case View::Заказать товары"
+			quidu      	"513E8E9E0215")))
+	    (object Association "$UNNAMED$18"
+		quid       	"513E906601D4"
+		stereotype 	"extend"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$19"
+			quid       	"513E906701BC"
+			supplier   	"Use Case View::Наполнить виртуальную корзину"
+			quidu      	"513E8EAA0326"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$20"
+			quid       	"513E906701BD"
+			supplier   	"Use Case View::Удалить товар из корзины"
+			quidu      	"513E8EAC02B5")))
+	    (object Association "$UNNAMED$21"
+		quid       	"513E909200C3"
+		stereotype 	"extend"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$22"
+			quid       	"513E90930044"
+			supplier   	"Use Case View::Выбрать товар из каталога в корзине"
+			quidu      	"513E8EAE036E"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$23"
+			quid       	"513E90930045"
+			supplier   	"Use Case View::Посмотреть свойства товара"
+			quidu      	"513E8EB403D6")))
+	    (object Association "$UNNAMED$24"
+		quid       	"513E909E0243"
+		stereotype 	"extend"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$25"
+			quid       	"513E90A0002B"
+			supplier   	"Use Case View::Выбрать товар из каталога в корзине"
+			quidu      	"513E8EAE036E"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$26"
+			quid       	"513E90A0002C"
+			supplier   	"Use Case View::Поиск товара по различным параметрам"
+			quidu      	"513E8EB60376")))
+	    (object Association "$UNNAMED$27"
+		quid       	"513E90A60043"
+		stereotype 	"extend"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$28"
+			quid       	"513E90A7003A"
+			supplier   	"Use Case View::Выбрать товар из каталога в корзине"
+			quidu      	"513E8EAE036E"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$29"
+			quid       	"513E90A7003B"
+			supplier   	"Use Case View::Сортировка товаров в каталоге"
+			quidu      	"513E8EB0019D")))
+	    (object Association "$UNNAMED$30"
+		quid       	"513E91B402D1"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$31"
+			quid       	"513E91B501F3"
+			supplier   	"Use Case View::Форма товара"
+			quidu      	"513E919F03A8"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$32"
+			quid       	"513E91B501F4"
+			supplier   	"Use Case View::Посмотреть свойства товара"
+			quidu      	"513E8EB403D6")))
+	    (object Association "$UNNAMED$33"
+		quid       	"513E93D1024E"
+		stereotype 	"include"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$34"
+			quid       	"513E93D201B0"
+			supplier   	"Use Case View::Выбрать товар из каталога в корзине"
+			quidu      	"513E8EAE036E"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$35"
+			quid       	"513E93D201B1"
+			supplier   	"Use Case View::Наполнить виртуальную корзину"
+			quidu      	"513E8EAA0326")))
+	    (object Association "$UNNAMED$36"
+		quid       	"513E951E019C"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$37"
+			quid       	"513E951E03C4"
+			supplier   	"Use Case View::Форма поиска"
+			quidu      	"513E94F6014B"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$38"
+			quid       	"513E951E03C5"
+			supplier   	"Use Case View::Поиск товара по различным параметрам"
+			quidu      	"513E8EB60376")))
+	    (object Association "$UNNAMED$39"
+		quid       	"513E958E01D2"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$40"
+			quid       	"513E958F00EB"
+			supplier   	"Use Case View::Форма доставки"
+			quidu      	"513E9565029C"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$41"
+			quid       	"513E958F00EC"
+			supplier   	"Use Case View::Указать условия доставки"
+			quidu      	"513E8EA803CF")))
+	    (object Association "$UNNAMED$42"
+		quid       	"513E95930332"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$43"
+			quid       	"513E959402F9"
+			supplier   	"Use Case View::Форма для оплаты"
+			quidu      	"513E95790013"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$44"
+			quid       	"513E959402FA"
+			supplier   	"Use Case View::Выбрать способ оплаты"
+			quidu      	"513E8EA700FE")))
+	    (object Association "$UNNAMED$45"
+		quid       	"513E959E0353"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$46"
+			quid       	"513E959F028A"
+			supplier   	"Use Case View::Форма ввода и вывода"
+			quidu      	"513E95410142"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$47"
+			quid       	"513E959F028B"
+			supplier   	"Use Case View::Выбрать товар из каталога в корзине"
+			quidu      	"513E8EAE036E")))
+	    (object Association "$UNNAMED$48"
+		quid       	"515E88E20322"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$49"
+			quid       	"515E88E3026A"
+			supplier   	"Use Case View::Расчитать скидку"
+			quidu      	"515E883F0233"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$50"
+			quid       	"515E88E3026B"
+			supplier   	"Use Case View::Наполнить виртуальную корзину"
+			quidu      	"513E8EAA0326")))
+	    (object Mechanism @1
+		logical_models 	(list unit_reference_list
+		    (object Object "$UNNAMED$51"
+			quid       	"5168E03602CF"
+			collaborators 	(list link_list
+			    (object Link
+				quid       	"5168E08E0357"
+				supplier   	"Форма для работы с корзиной"
+				quidu      	"5168E03C021E"
+				messages   	(list Messages
+				    (object Message "Begin_to_work( )"
+					quid       	"5168E08E0358"
+					frequency  	"Aperiodic"
+					synchronization 	"Simple"
+					dir        	"FromClientToSupplier"
+					sequence   	""
+					ordinal    	0
+					quidu      	"51743B10001F")
+				    (object Message "To_select_catalogues( )"
+					quid       	"5168E16D02AC"
+					frequency  	"Aperiodic"
+					synchronization 	"Simple"
+					dir        	"FromClientToSupplier"
+					sequence   	""
+					ordinal    	3
+					quidu      	"51774D0400F1")
+				    (object Message "To_select_goods( )"
+					quid       	"5168E3FD0268"
+					frequency  	"Aperiodic"
+					synchronization 	"Simple"
+					dir        	"FromClientToSupplier"
+					sequence   	""
+					ordinal    	6
+					quidu      	"517752090022")
+				    (object Message "To_order_goods( )"
+					quid       	"5168E4DF004C"
+					frequency  	"Aperiodic"
+					synchronization 	"Simple"
+					dir        	"FromClientToSupplier"
+					sequence   	""
+					ordinal    	10
+					quidu      	"51774DE902BA"))))
+			class      	"Logical View::Users::Buyer"
+			quidu      	"5177546E03BC"
+			persistence 	"Transient"
+			multi      	TRUE)
+		    (object Object "Форма для работы с корзиной"
+			quid       	"5168E03C021E"
+			collaborators 	(list link_list
+			    (object Link
+				quid       	"5168E118035E"
+				supplier   	"Список каталогов"
+				quidu      	"5168E0540237"
+				messages   	(list Messages
+				    (object Message "To_reload_catalogues( )"
+					quid       	"5168E118035F"
+					frequency  	"Aperiodic"
+					synchronization 	"Timeout"
+					dir        	"FromClientToSupplier"
+					sequence   	""
+					ordinal    	1
+					quidu      	"51774E5F01BE")
+				    (object Message "To_display catalogues(List_of_Catalogues)"
+					quid       	"5168E14A013D"
+					frequency  	"Aperiodic"
+					synchronization 	"Asynchronous"
+					dir        	"ToClientFromSupplier"
+					sequence   	""
+					ordinal    	2
+					quidu      	"51743BB90097")))
+			    (object Link
+				quid       	"5168E19903C0"
+				supplier   	"Список товаров"
+				quidu      	"5168E0640175"
+				messages   	(list Messages
+				    (object Message "Get_goods(Integer)"
+					quid       	"5168E19903C1"
+					frequency  	"Aperiodic"
+					synchronization 	"Timeout"
+					dir        	"FromClientToSupplier"
+					sequence   	""
+					ordinal    	4
+					quidu      	"51774F9901B6")
+				    (object Message "To_display_goods(List_of_Goods)"
+					quid       	"5168E3E803D8"
+					frequency  	"Aperiodic"
+					synchronization 	"Asynchronous"
+					dir        	"ToClientFromSupplier"
+					sequence   	""
+					ordinal    	5
+					quidu      	"51774D17004F")
+				    (object Message "To_search_goods(Integer)"
+					quid       	"5168E44702E7"
+					frequency  	"Aperiodic"
+					synchronization 	"Timeout"
+					dir        	"FromClientToSupplier"
+					sequence   	""
+					ordinal    	7
+					quidu      	"51774FBD03C5")))
+			    (object Link
+				quid       	"5168E20503E4"
+				supplier   	"Корзина"
+				quidu      	"5168E06F01EE"
+				messages   	(list Messages
+				    (object Message "To_add_goods(Integer, Integer)"
+					quid       	"5168E51F00DE"
+					frequency  	"Aperiodic"
+					synchronization 	"Timeout"
+					dir        	"FromClientToSupplier"
+					sequence   	""
+					ordinal    	11
+					quidu      	"5177504F000B")
+				    (object Message "To_display_basket(Basket)"
+					quid       	"5168E5C20125"
+					frequency  	"Aperiodic"
+					synchronization 	"Asynchronous"
+					dir        	"ToClientFromSupplier"
+					sequence   	""
+					ordinal    	13
+					quidu      	"51774E240340"))))
+			class      	"Logical View::Boundaries::Forma_for_Basket"
+			quidu      	"517438D1002E"
+			persistence 	"Transient"
+			multi      	FALSE)
+		    (object Object "Список каталогов"
+			quid       	"5168E0540237"
+			class      	"Logical View::Entities::List_of_Catalogues"
+			quidu      	"517438EA0117"
+			persistence 	"Transient"
+			multi      	FALSE)
+		    (object Object "Список товаров"
+			quid       	"5168E0640175"
+			collaborators 	(list link_list
+			    (object Link
+				quid       	"5168E47F0078"
+				supplier   	"Товар"
+				quidu      	"5168E36D004A"
+				messages   	(list Messages
+				    (object Message "Get_information( )"
+					quid       	"5168E47F0079"
+					frequency  	"Aperiodic"
+					synchronization 	"Timeout"
+					dir        	"FromClientToSupplier"
+					sequence   	""
+					ordinal    	8
+					quidu      	"51775026017B"))))
+			class      	"Logical View::Entities::List_of_Goods"
+			quidu      	"517438FA0096"
+			persistence 	"Transient"
+			multi      	FALSE)
+		    (object Object "Корзина"
+			quid       	"5168E06F01EE"
+			collaborators 	(list link_list
+			    (object Link
+				quid       	"5168E55D02A7"
+				supplier   	"Корзина"
+				quidu      	"5168E06F01EE"
+				messages   	(list Messages
+				    (object Message "Refresh( )"
+					quid       	"5168E55D02A8"
+					frequency  	"Aperiodic"
+					synchronization 	"Simple"
+					dir        	"FromClientToSupplier"
+					sequence   	""
+					ordinal    	12
+					quidu      	"517750A30074"))))
+			class      	"Logical View::Entities::Basket"
+			quidu      	"5174391000CF"
+			persistence 	"Transient"
+			multi      	FALSE)
+		    (object Object "Товар"
+			quid       	"5168E36D004A"
+			collaborators 	(list link_list
+			    (object Link
+				quid       	"5168E4AD016F"
+				supplier   	"Форма для работы с корзиной"
+				quidu      	"5168E03C021E"
+				messages   	(list Messages
+				    (object Message "To_display_information_of_goods(Goods)"
+					quid       	"5168E4AD0170"
+					frequency  	"Aperiodic"
+					synchronization 	"Asynchronous"
+					dir        	"FromClientToSupplier"
+					sequence   	""
+					ordinal    	9
+					quidu      	"51774D4E03B5"))))
+			class      	"Logical View::Entities::Goods"
+			quidu      	"517438FF0327"
+			persistence 	"Transient"
+			multi      	FALSE))))
+	logical_presentations 	(list unit_reference_list
+	    (object UseCaseDiagram "Main"
+		quid       	"513E8E3203AA"
+		title      	"Main"
+		zoom       	90
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list
+		    (object ClassView "Class" "Use Case View::Постоянный покупатель" @2
+			ShowCompartmentStereotypes 	TRUE
+			IncludeAttribute 	TRUE
+			IncludeOperation 	TRUE
+			location   	(175, 922)
+			label      	(object ItemLabel
+			    Parent_View 	@2
+			    location   	(175, 1082)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	325
+			    justify    	0
+			    label      	"Постоянный покупатель")
+			stereotype 	FALSE
+			icon       	"Actor"
+			icon_style 	"Icon"
+			quidu      	"513E8E8B004E"
+			annotation 	8
+			autoResize 	TRUE)
+		    (object NoteView @3
+			location   	(947, 194)
+			label      	(object ItemLabel
+			    Parent_View 	@3
+			    location   	(647, 89)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    nlines     	3
+			    max_width  	565
+			    label      	"По запросу пользователя открывается форма товара")
+			stereotype 	TRUE
+			icon_style 	"Icon"
+			width      	625
+			height     	222)
+		    (object NoteView @4
+			location   	(1986, 191)
+			label      	(object ItemLabel
+			    Parent_View 	@4
+			    location   	(1585, 62)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    nlines     	4
+			    max_width  	766
+			    label      	"Автоматически сортируем по названию товара, но пользователь может изменить свойства сортировки")
+			stereotype 	TRUE
+			icon_style 	"Icon"
+			width      	826
+			height     	270)
+		    (object NoteView @5
+			location   	(3100, 208)
+			label      	(object ItemLabel
+			    Parent_View 	@5
+			    location   	(2821, 89)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    nlines     	4
+			    max_width  	523
+			    label      	"По запросу пользователя открывается Форма поиска")
+			stereotype 	TRUE
+			icon_style 	"Icon"
+			width      	583
+			height     	250)
+		    (object NoteView @6
+			location   	(2853, 1912)
+			label      	(object ItemLabel
+			    Parent_View 	@6
+			    location   	(2612, 1786)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    nlines     	4
+			    max_width  	447
+			    label      	"Если пользователь передумал")
+			stereotype 	TRUE
+			icon_style 	"Icon"
+			width      	507
+			height     	264)
+		    (object ClassView "Class" "Use Case View::Форма доставки" @7
+			ShowCompartmentStereotypes 	TRUE
+			IncludeAttribute 	TRUE
+			IncludeOperation 	TRUE
+			location   	(1998, 1865)
+			label      	(object ItemLabel
+			    Parent_View 	@7
+			    location   	(1997, 1973)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	229
+			    justify    	0
+			    label      	"Форма доставки")
+			stereotype 	FALSE
+			icon       	"Interface"
+			icon_style 	"Icon"
+			quidu      	"513E9565029C"
+			width      	58
+			height     	58
+			annotation 	8
+			autoResize 	TRUE)
+		    (object ClassView "Class" "Use Case View::Форма для оплаты" @8
+			ShowCompartmentStereotypes 	TRUE
+			IncludeAttribute 	TRUE
+			IncludeOperation 	TRUE
+			location   	(1714, 2232)
+			label      	(object ItemLabel
+			    Parent_View 	@8
+			    location   	(1713, 2340)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	229
+			    justify    	0
+			    label      	"Форма для оплаты")
+			stereotype 	FALSE
+			icon       	"Interface"
+			icon_style 	"Icon"
+			quidu      	"513E95790013"
+			width      	58
+			height     	58
+			annotation 	8
+			autoResize 	TRUE)
+		    (object ClassView "Class" "Use Case View::Форма товара" @9
+			ShowCompartmentStereotypes 	TRUE
+			IncludeAttribute 	TRUE
+			IncludeOperation 	TRUE
+			location   	(663, 508)
+			label      	(object ItemLabel
+			    Parent_View 	@9
+			    location   	(662, 616)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	229
+			    justify    	0
+			    label      	"Форма товара")
+			stereotype 	FALSE
+			icon       	"Interface"
+			icon_style 	"Icon"
+			quidu      	"513E919F03A8"
+			width      	58
+			height     	58
+			annotation 	8
+			autoResize 	TRUE)
+		    (object ClassView "Class" "Use Case View::Форма поиска" @10
+			ShowCompartmentStereotypes 	TRUE
+			IncludeAttribute 	TRUE
+			IncludeOperation 	TRUE
+			location   	(3006, 902)
+			label      	(object ItemLabel
+			    Parent_View 	@10
+			    location   	(3005, 1010)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	229
+			    justify    	0
+			    label      	"Форма поиска")
+			stereotype 	FALSE
+			icon       	"Interface"
+			icon_style 	"Icon"
+			quidu      	"513E94F6014B"
+			width      	58
+			height     	58
+			annotation 	8
+			autoResize 	TRUE)
+		    (object ClassView "Class" "Use Case View::Покупатель" @11
+			ShowCompartmentStereotypes 	TRUE
+			IncludeAttribute 	TRUE
+			IncludeOperation 	TRUE
+			location   	(192, 1665)
+			label      	(object ItemLabel
+			    Parent_View 	@11
+			    location   	(192, 1825)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	325
+			    justify    	0
+			    label      	"Покупатель")
+			stereotype 	FALSE
+			icon       	"Actor"
+			icon_style 	"Icon"
+			quidu      	"513E8E8803BE"
+			annotation 	8
+			autoResize 	TRUE)
+		    (object InheritView "" @12
+			stereotype 	TRUE
+			icon_style 	"Icon"
+			quidu      	"513E8FFB031C"
+			client     	@2
+			supplier   	@11
+			line_style 	0)
+		    (object UseCaseView "Use Case View::Указать необходимые сопроводительные документы" @13
+			location   	(452, 2087)
+			label      	(object ItemLabel
+			    Parent_View 	@13
+			    location   	(452, 2225)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	631
+			    justify    	0
+			    label      	"Указать необходимые сопроводительные документы")
+			stereotype 	TRUE
+			icon_style 	"Icon"
+			quidu      	"513E8EA00226"
+			height     	118
+			autoResize 	TRUE)
+		    (object UseCaseView "Use Case View::Указать личные данные покупателя" @14
+			location   	(938, 1977)
+			label      	(object ItemLabel
+			    Parent_View 	@14
+			    location   	(938, 2115)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	631
+			    justify    	0
+			    label      	"Указать личные данные покупателя")
+			stereotype 	TRUE
+			icon_style 	"Icon"
+			quidu      	"513E8EA2003E"
+			height     	118
+			autoResize 	TRUE)
+		    (object UseCaseView "Use Case View::Указать условия доставки" @15
+			location   	(1422, 1476)
+			label      	(object ItemLabel
+			    Parent_View 	@15
+			    location   	(1422, 1614)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	631
+			    justify    	0
+			    label      	"Указать условия доставки")
+			stereotype 	TRUE
+			icon_style 	"Icon"
+			quidu      	"513E8EA803CF"
+			height     	118
+			autoResize 	TRUE)
+		    (object AssociationViewNew "$UNNAMED$39" @16
+			location   	(1818, 1742)
+			stereotype 	TRUE
+			icon_style 	"Icon"
+			quidu      	"513E958E01D2"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$40" @17
+				Parent_View 	@16
+				location   	(395, 634)
+				stereotype 	TRUE
+				icon_style 	"Icon"
+				quidu      	"513E958F00EB"
+				client     	@16
+				supplier   	@7
+				line_style 	0)
+			    (object RoleView "$UNNAMED$41" @18
+				Parent_View 	@16
+				location   	(395, 634)
+				stereotype 	TRUE
+				icon_style 	"Icon"
+				quidu      	"513E958F00EC"
+				client     	@16
+				supplier   	@15
+				line_style 	0)))
+		    (object UseCaseView "Use Case View::Выбрать способ оплаты" @19
+			location   	(1376, 1805)
+			label      	(object ItemLabel
+			    Parent_View 	@19
+			    location   	(1376, 1943)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	631
+			    justify    	0
+			    label      	"Выбрать способ оплаты")
+			stereotype 	TRUE
+			icon_style 	"Icon"
+			quidu      	"513E8EA700FE"
+			height     	118
+			autoResize 	TRUE)
+		    (object AssociationViewNew "$UNNAMED$42" @20
+			location   	(1599, 2086)
+			stereotype 	TRUE
+			icon_style 	"Icon"
+			quidu      	"513E95930332"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$43" @21
+				Parent_View 	@20
+				location   	(222, 649)
+				stereotype 	TRUE
+				icon_style 	"Icon"
+				quidu      	"513E959402F9"
+				client     	@20
+				supplier   	@8
+				line_style 	0)
+			    (object RoleView "$UNNAMED$44" @22
+				Parent_View 	@20
+				location   	(222, 649)
+				stereotype 	TRUE
+				icon_style 	"Icon"
+				quidu      	"513E959402FA"
+				client     	@20
+				supplier   	@19
+				line_style 	0)))
+		    (object UseCaseView "Use Case View::Посмотреть свойства товара" @23
+			location   	(1236, 514)
+			label      	(object ItemLabel
+			    Parent_View 	@23
+			    location   	(1236, 652)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	631
+			    justify    	0
+			    label      	"Посмотреть свойства товара")
+			stereotype 	TRUE
+			icon_style 	"Icon"
+			quidu      	"513E8EB403D6"
+			height     	118
+			autoResize 	TRUE)
+		    (object AssociationViewNew "$UNNAMED$30" @24
+			location   	(907, 508)
+			stereotype 	TRUE
+			icon_style 	"Icon"
+			quidu      	"513E91B402D1"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$31" @25
+				Parent_View 	@24
+				location   	(-234, 442)
+				stereotype 	TRUE
+				icon_style 	"Icon"
+				quidu      	"513E91B501F3"
+				client     	@24
+				supplier   	@9
+				line_style 	0)
+			    (object RoleView "$UNNAMED$32" @26
+				Parent_View 	@24
+				location   	(-234, 442)
+				stereotype 	TRUE
+				icon_style 	"Icon"
+				quidu      	"513E91B501F4"
+				client     	@24
+				supplier   	@23
+				line_style 	0)))
+		    (object AttachView "" @27
+			stereotype 	TRUE
+			icon_style 	"Icon"
+			client     	@3
+			supplier   	@23
+			line_style 	0)
+		    (object UseCaseView "Use Case View::Поиск товара по различным параметрам" @28
+			location   	(2705, 514)
+			label      	(object ItemLabel
+			    Parent_View 	@28
+			    location   	(2705, 652)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	631
+			    justify    	0
+			    label      	"Поиск товара по различным параметрам")
+			stereotype 	TRUE
+			icon_style 	"Icon"
+			quidu      	"513E8EB60376"
+			height     	118
+			autoResize 	TRUE)
+		    (object AssociationViewNew "$UNNAMED$36" @29
+			location   	(2919, 790)
+			stereotype 	TRUE
+			icon_style 	"Icon"
+			quidu      	"513E951E019C"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$37" @30
+				Parent_View 	@29
+				location   	(213, 644)
+				stereotype 	TRUE
+				icon_style 	"Icon"
+				quidu      	"513E951E03C4"
+				client     	@29
+				supplier   	@10
+				line_style 	0)
+			    (object RoleView "$UNNAMED$38" @31
+				Parent_View 	@29
+				location   	(213, 644)
+				stereotype 	TRUE
+				icon_style 	"Icon"
+				quidu      	"513E951E03C5"
+				client     	@29
+				supplier   	@28
+				line_style 	0)))
+		    (object AttachView "" @32
+			stereotype 	TRUE
+			icon_style 	"Icon"
+			client     	@5
+			supplier   	@28
+			line_style 	0)
+		    (object UseCaseView "Use Case View::Сортировка товаров в каталоге" @33
+			location   	(1314, 889)
+			label      	(object ItemLabel
+			    Parent_View 	@33
+			    location   	(1314, 1027)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	631
+			    justify    	0
+			    label      	"Сортировка товаров в каталоге")
+			stereotype 	TRUE
+			icon_style 	"Icon"
+			quidu      	"513E8EB0019D"
+			height     	118
+			autoResize 	TRUE)
+		    (object ClassView "Class" "Use Case View::Форма ввода и вывода" @34
+			ShowCompartmentStereotypes 	TRUE
+			IncludeAttribute 	TRUE
+			IncludeOperation 	TRUE
+			location   	(2345, 868)
+			label      	(object ItemLabel
+			    Parent_View 	@34
+			    location   	(2064, 836)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    nlines     	1
+			    max_width  	562
+			    justify    	0
+			    label      	"Форма ввода и вывода")
+			stereotype 	(object ItemLabel
+			    Parent_View 	@34
+			    location   	(2064, 786)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    anchor     	10
+			    nlines     	1
+			    max_width  	562
+			    justify    	0
+			    label      	"<<Interface>>")
+			icon       	"Interface"
+			icon_style 	"Label"
+			quidu      	"513E95410142"
+			width      	580
+			height     	192
+			annotation 	8
+			autoResize 	TRUE)
+		    (object UseCaseView "Use Case View::Заказать товары" @35
+			location   	(588, 1236)
+			label      	(object ItemLabel
+			    Parent_View 	@35
+			    location   	(588, 1374)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	631
+			    justify    	0
+			    label      	"Заказать товары")
+			stereotype 	TRUE
+			icon_style 	"Icon"
+			quidu      	"513E8E9E0215"
+			height     	118
+			autoResize 	TRUE)
+		    (object AssociationViewNew "$UNNAMED$0" @36
+			location   	(342, 1499)
+			stereotype 	TRUE
+			icon_style 	"Icon"
+			quidu      	"513E900901B4"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$1" @37
+				Parent_View 	@36
+				location   	(184, 546)
+				stereotype 	TRUE
+				icon_style 	"Icon"
+				quidu      	"513E900A01EC"
+				client     	@36
+				supplier   	@35
+				line_style 	0
+				label      	(object SegLabel @38
+				    Parent_View 	@37
+				    location   	(374, 1529)
+				    font       	(object Font
+					size       	10
+					charSet    	204)
+				    stereotype 	TRUE
+				    icon_style 	"Icon"
+				    anchor     	2
+				    anchor_loc 	1
+				    nlines     	1
+				    max_width  	90
+				    justify    	0
+				    label      	"+1..*"
+				    pctDist    	0.000000
+				    height     	44
+				    orientation 	1))
+			    (object RoleView "$UNNAMED$2" @39
+				Parent_View 	@36
+				location   	(184, 546)
+				stereotype 	TRUE
+				icon_style 	"Icon"
+				quidu      	"513E900A01ED"
+				client     	@36
+				supplier   	@11
+				line_style 	0)))
+		    (object AssociationViewNew "$UNNAMED$3" @40
+			location   	(507, 1715)
+			stereotype 	(object SegLabel @41
+			    Parent_View 	@40
+			    location   	(525, 1724)
+			    font       	(object Font
+				size       	10
+				charSet    	204)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    anchor     	10
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	450
+			    justify    	0
+			    label      	"<<include>>"
+			    pctDist    	0.000000
+			    height     	9
+			    orientation 	1)
+			icon_style 	"Icon"
+			quidu      	"513E901801B4"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$4" @42
+				Parent_View 	@40
+				location   	(257, 1522)
+				stereotype 	TRUE
+				icon_style 	"Icon"
+				quidu      	"513E90190124"
+				client     	@40
+				supplier   	@13
+				line_style 	0)
+			    (object RoleView "$UNNAMED$5" @43
+				Parent_View 	@40
+				location   	(257, 1522)
+				stereotype 	TRUE
+				icon_style 	"Icon"
+				quidu      	"513E90190125"
+				client     	@40
+				supplier   	@35
+				line_style 	0)))
+		    (object AssociationViewNew "$UNNAMED$12" @44
+			location   	(785, 1659)
+			stereotype 	(object SegLabel @45
+			    Parent_View 	@44
+			    location   	(846, 1666)
+			    font       	(object Font
+				size       	10
+				charSet    	204)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    anchor     	10
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	450
+			    justify    	0
+			    label      	"<<include>>"
+			    pctDist    	1.000000
+			    height     	7
+			    orientation 	1)
+			icon_style 	"Icon"
+			quidu      	"513E904B002C"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$13" @46
+				Parent_View 	@44
+				location   	(535, 1466)
+				stereotype 	TRUE
+				icon_style 	"Icon"
+				quidu      	"513E904B028C"
+				client     	@44
+				supplier   	@14
+				line_style 	0)
+			    (object RoleView "$UNNAMED$14" @47
+				Parent_View 	@44
+				location   	(535, 1466)
+				stereotype 	TRUE
+				icon_style 	"Icon"
+				quidu      	"513E904B028D"
+				client     	@44
+				supplier   	@35
+				line_style 	0)))
+		    (object AssociationViewNew "$UNNAMED$6" @48
+			location   	(1050, 1366)
+			stereotype 	(object SegLabel @49
+			    Parent_View 	@48
+			    location   	(1089, 1347)
+			    font       	(object Font
+				size       	10
+				charSet    	204)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    anchor     	10
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	450
+			    justify    	0
+			    label      	"<<include>>"
+			    pctDist    	1.000000
+			    height     	20
+			    orientation 	0)
+			icon_style 	"Icon"
+			quidu      	"513E903303E4"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$7" @50
+				Parent_View 	@48
+				location   	(800, 1173)
+				stereotype 	TRUE
+				icon_style 	"Icon"
+				quidu      	"513E903402F4"
+				client     	@48
+				supplier   	@15
+				line_style 	0)
+			    (object RoleView "$UNNAMED$8" @51
+				Parent_View 	@48
+				location   	(800, 1173)
+				stereotype 	TRUE
+				icon_style 	"Icon"
+				quidu      	"513E903402F5"
+				client     	@48
+				supplier   	@35
+				line_style 	0)))
+		    (object AssociationViewNew "$UNNAMED$9" @52
+			location   	(1040, 1561)
+			stereotype 	(object SegLabel @53
+			    Parent_View 	@52
+			    location   	(1006, 1474)
+			    font       	(object Font
+				size       	10
+				charSet    	204)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    anchor     	10
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	450
+			    justify    	0
+			    label      	"<<include>>"
+			    pctDist    	0.000000
+			    height     	88
+			    orientation 	0)
+			icon_style 	"Icon"
+			quidu      	"513E904302EB"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$10" @54
+				Parent_View 	@52
+				location   	(790, 1368)
+				stereotype 	TRUE
+				icon_style 	"Icon"
+				quidu      	"513E90440104"
+				client     	@52
+				supplier   	@19
+				line_style 	0)
+			    (object RoleView "$UNNAMED$11" @55
+				Parent_View 	@52
+				location   	(790, 1368)
+				stereotype 	TRUE
+				icon_style 	"Icon"
+				quidu      	"513E90440105"
+				client     	@52
+				supplier   	@35
+				line_style 	0)))
+		    (object UseCaseView "Use Case View::Удалить товар из корзины" @56
+			location   	(2558, 1560)
+			label      	(object ItemLabel
+			    Parent_View 	@56
+			    location   	(2558, 1698)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	631
+			    justify    	0
+			    label      	"Удалить товар из корзины")
+			stereotype 	TRUE
+			icon_style 	"Icon"
+			quidu      	"513E8EAC02B5"
+			height     	118
+			autoResize 	TRUE)
+		    (object AttachView "" @57
+			stereotype 	TRUE
+			icon_style 	"Icon"
+			client     	@6
+			supplier   	@56
+			line_style 	0)
+		    (object UseCaseView "Use Case View::Выбрать товар из каталога в корзине" @58
+			location   	(2005, 516)
+			label      	(object ItemLabel
+			    Parent_View 	@58
+			    location   	(2005, 654)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	631
+			    justify    	0
+			    label      	"Выбрать товар из каталога в корзине")
+			stereotype 	TRUE
+			icon_style 	"Icon"
+			quidu      	"513E8EAE036E"
+			height     	118
+			autoResize 	TRUE)
+		    (object AssociationViewNew "$UNNAMED$21" @59
+			location   	(1619, 513)
+			stereotype 	(object SegLabel @60
+			    Parent_View 	@59
+			    location   	(1621, 478)
+			    font       	(object Font
+				size       	10
+				charSet    	204)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    anchor     	10
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	450
+			    justify    	0
+			    label      	"<<extend>>"
+			    pctDist    	0.000000
+			    height     	36
+			    orientation 	0)
+			icon_style 	"Icon"
+			quidu      	"513E909200C3"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$22" @61
+				Parent_View 	@59
+				location   	(723, 79)
+				stereotype 	TRUE
+				icon_style 	"Icon"
+				quidu      	"513E90930044"
+				client     	@59
+				supplier   	@58
+				line_style 	0)
+			    (object RoleView "$UNNAMED$23" @62
+				Parent_View 	@59
+				location   	(723, 79)
+				stereotype 	TRUE
+				icon_style 	"Icon"
+				quidu      	"513E90930045"
+				client     	@59
+				supplier   	@23
+				line_style 	0)))
+		    (object AssociationViewNew "$UNNAMED$24" @63
+			location   	(2354, 513)
+			stereotype 	(object SegLabel @64
+			    Parent_View 	@63
+			    location   	(2356, 474)
+			    font       	(object Font
+				size       	10
+				charSet    	204)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    anchor     	10
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	450
+			    justify    	0
+			    label      	"<<extend>>"
+			    pctDist    	0.000000
+			    height     	40
+			    orientation 	0)
+			icon_style 	"Icon"
+			quidu      	"513E909E0243"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$25" @65
+				Parent_View 	@63
+				location   	(1398, 82)
+				stereotype 	TRUE
+				icon_style 	"Icon"
+				quidu      	"513E90A0002B"
+				client     	@63
+				supplier   	@58
+				line_style 	0)
+			    (object RoleView "$UNNAMED$26" @66
+				Parent_View 	@63
+				location   	(1398, 82)
+				stereotype 	TRUE
+				icon_style 	"Icon"
+				quidu      	"513E90A0002C"
+				client     	@63
+				supplier   	@28
+				line_style 	0)))
+		    (object AssociationViewNew "$UNNAMED$27" @67
+			location   	(1549, 759)
+			stereotype 	(object SegLabel @68
+			    Parent_View 	@67
+			    location   	(1510, 738)
+			    font       	(object Font
+				size       	10
+				charSet    	204)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    anchor     	10
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	450
+			    justify    	0
+			    label      	"<<extend>>"
+			    pctDist    	0.000000
+			    height     	22
+			    orientation 	0)
+			icon_style 	"Icon"
+			quidu      	"513E90A60043"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$28" @69
+				Parent_View 	@67
+				location   	(737, -50)
+				stereotype 	TRUE
+				icon_style 	"Icon"
+				quidu      	"513E90A7003A"
+				client     	@67
+				supplier   	@58
+				line_style 	0)
+			    (object RoleView "$UNNAMED$29" @70
+				Parent_View 	@67
+				location   	(737, -50)
+				stereotype 	TRUE
+				icon_style 	"Icon"
+				quidu      	"513E90A7003B"
+				client     	@67
+				supplier   	@33
+				line_style 	0)))
+		    (object AssociationViewNew "$UNNAMED$45" @71
+			location   	(2221, 740)
+			stereotype 	TRUE
+			icon_style 	"Icon"
+			quidu      	"513E959E0353"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$46" @72
+				Parent_View 	@71
+				location   	(215, 592)
+				stereotype 	TRUE
+				icon_style 	"Icon"
+				quidu      	"513E959F028A"
+				client     	@71
+				supplier   	@34
+				line_style 	0)
+			    (object RoleView "$UNNAMED$47" @73
+				Parent_View 	@71
+				location   	(215, 592)
+				stereotype 	TRUE
+				icon_style 	"Icon"
+				quidu      	"513E959F028B"
+				client     	@71
+				supplier   	@58
+				line_style 	0)))
+		    (object AttachView "" @74
+			stereotype 	TRUE
+			icon_style 	"Icon"
+			client     	@4
+			supplier   	@58
+			line_style 	0)
+		    (object UseCaseView "Use Case View::Расчитать скидку" @75
+			location   	(2263, 1169)
+			label      	(object ItemLabel
+			    Parent_View 	@75
+			    location   	(2263, 1307)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	631
+			    justify    	0
+			    label      	"Расчитать скидку")
+			stereotype 	TRUE
+			icon_style 	"Icon"
+			quidu      	"515E883F0233"
+			height     	118
+			autoResize 	TRUE)
+		    (object UseCaseView "Use Case View::Наполнить виртуальную корзину" @76
+			location   	(1800, 1234)
+			label      	(object ItemLabel
+			    Parent_View 	@76
+			    location   	(1800, 1372)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	631
+			    justify    	0
+			    label      	"Наполнить виртуальную корзину")
+			stereotype 	TRUE
+			icon_style 	"Icon"
+			quidu      	"513E8EAA0326"
+			height     	118
+			autoResize 	TRUE)
+		    (object AssociationViewNew "$UNNAMED$15" @77
+			location   	(1192, 1233)
+			stereotype 	(object SegLabel @78
+			    Parent_View 	@77
+			    location   	(1210, 1200)
+			    font       	(object Font
+				size       	10
+				charSet    	204)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    anchor     	10
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	450
+			    justify    	0
+			    label      	"<<include>>"
+			    pctDist    	0.000000
+			    height     	34
+			    orientation 	0)
+			icon_style 	"Icon"
+			quidu      	"513E90530363"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$16" @79
+				Parent_View 	@77
+				location   	(942, 1040)
+				stereotype 	TRUE
+				icon_style 	"Icon"
+				quidu      	"513E90540333"
+				client     	@77
+				supplier   	@76
+				line_style 	0)
+			    (object RoleView "$UNNAMED$17" @80
+				Parent_View 	@77
+				location   	(942, 1040)
+				stereotype 	TRUE
+				icon_style 	"Icon"
+				quidu      	"513E90540334"
+				client     	@77
+				supplier   	@35
+				line_style 	0)))
+		    (object AssociationViewNew "$UNNAMED$18" @81
+			location   	(2264, 1433)
+			stereotype 	(object SegLabel @82
+			    Parent_View 	@81
+			    location   	(2308, 1462)
+			    font       	(object Font
+				size       	10
+				charSet    	204)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    anchor     	10
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	450
+			    justify    	0
+			    label      	"<<extend>>"
+			    pctDist    	1.000000
+			    height     	29
+			    orientation 	1)
+			icon_style 	"Icon"
+			quidu      	"513E906601D4"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$19" @83
+				Parent_View 	@81
+				location   	(1412, 1208)
+				stereotype 	TRUE
+				icon_style 	"Icon"
+				quidu      	"513E906701BC"
+				client     	@81
+				supplier   	@76
+				line_style 	0)
+			    (object RoleView "$UNNAMED$20" @84
+				Parent_View 	@81
+				location   	(1412, 1208)
+				stereotype 	TRUE
+				icon_style 	"Icon"
+				quidu      	"513E906701BD"
+				client     	@81
+				supplier   	@56
+				line_style 	0)))
+		    (object AssociationViewNew "$UNNAMED$33" @85
+			location   	(1879, 942)
+			stereotype 	(object SegLabel @86
+			    Parent_View 	@85
+			    location   	(1878, 972)
+			    font       	(object Font
+				size       	10
+				charSet    	204)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    anchor     	10
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	450
+			    justify    	0
+			    label      	"<<include>>"
+			    pctDist    	0.000000
+			    height     	30
+			    orientation 	1)
+			icon_style 	"Icon"
+			quidu      	"513E93D1024E"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$34" @87
+				Parent_View 	@85
+				location   	(296, 157)
+				stereotype 	TRUE
+				icon_style 	"Icon"
+				quidu      	"513E93D201B0"
+				client     	@85
+				supplier   	@58
+				line_style 	0)
+			    (object RoleView "$UNNAMED$35" @88
+				Parent_View 	@85
+				location   	(296, 157)
+				stereotype 	TRUE
+				icon_style 	"Icon"
+				quidu      	"513E93D201B1"
+				client     	@85
+				supplier   	@76
+				line_style 	0)))
+		    (object AssociationViewNew "$UNNAMED$48" @89
+			location   	(2029, 1199)
+			stereotype 	TRUE
+			icon_style 	"Icon"
+			quidu      	"515E88E20322"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$49" @90
+				Parent_View 	@89
+				location   	(229, -35)
+				stereotype 	TRUE
+				icon_style 	"Icon"
+				quidu      	"515E88E3026A"
+				client     	@89
+				supplier   	@75
+				line_style 	0)
+			    (object RoleView "$UNNAMED$50" @91
+				Parent_View 	@89
+				location   	(229, -35)
+				stereotype 	TRUE
+				icon_style 	"Icon"
+				quidu      	"515E88E3026B"
+				client     	@89
+				supplier   	@76
+				line_style 	0)))))
+	    (object InteractionDiagram "Наполнить виртуальную корзину"
+		mechanism_ref 	@1
+		quid       	"5168DFFF017D"
+		title      	"Наполнить виртуальную корзину"
+		zoom       	90
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list
+		    (object InterObjView "$UNNAMED$51" @92
+			location   	(364, 225)
+			font       	(object Font
+			    charSet    	204
+			    underline  	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@92
+			    location   	(364, 225)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	144
+			    justify    	0
+			    label      	"")
+			stereotype 	TRUE
+			icon_style 	"Icon"
+			quidu      	"5168E03602CF"
+			width      	162
+			height     	2505
+			icon_height 	162
+			icon_width 	120
+			annotation 	1
+			Focus_Of_Control 	(object Focus_Of_Control "" @93
+			    location   	(364, 470)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    InterObjView 	@92
+			    height     	120
+			    y_coord    	60
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @94
+			    location   	(364, 1063)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    InterObjView 	@92
+			    height     	120
+			    y_coord    	60
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @95
+			    location   	(364, 1451)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    InterObjView 	@92
+			    height     	176
+			    y_coord    	116
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @96
+			    location   	(364, 2054)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    InterObjView 	@92
+			    height     	120
+			    y_coord    	60
+			    Nested     	FALSE))
+		    (object InterObjView "Форма для работы с корзиной" @97
+			location   	(943, 225)
+			font       	(object Font
+			    charSet    	204
+			    underline  	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@97
+			    location   	(943, 225)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	676
+			    justify    	0
+			    label      	"Форма для работы с корзиной")
+			stereotype 	TRUE
+			icon_style 	"Icon"
+			quidu      	"5168E03C021E"
+			width      	694
+			height     	2505
+			icon_height 	0
+			icon_width 	0
+			annotation 	1
+			Focus_Of_Control 	(object Focus_Of_Control "" @98
+			    location   	(943, 470)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    InterObjView 	@97
+			    height     	60
+			    y_coord    	0
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @99
+			    location   	(943, 630)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    InterObjView 	@97
+			    height     	196
+			    y_coord    	136
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @100
+			    location   	(943, 911)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    InterObjView 	@97
+			    height     	60
+			    y_coord    	0
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @101
+			    location   	(943, 1063)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    InterObjView 	@97
+			    height     	60
+			    y_coord    	0
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @102
+			    location   	(943, 1219)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    InterObjView 	@97
+			    height     	120
+			    y_coord    	60
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @103
+			    location   	(943, 1358)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    InterObjView 	@97
+			    height     	60
+			    y_coord    	0
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @104
+			    location   	(943, 1507)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    InterObjView 	@97
+			    height     	60
+			    y_coord    	0
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @105
+			    location   	(943, 1635)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    InterObjView 	@97
+			    height     	120
+			    y_coord    	60
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @106
+			    location   	(943, 1920)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    InterObjView 	@97
+			    height     	60
+			    y_coord    	0
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @107
+			    location   	(943, 2054)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    InterObjView 	@97
+			    height     	60
+			    y_coord    	0
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @108
+			    location   	(943, 2200)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    InterObjView 	@97
+			    height     	440
+			    y_coord    	380
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @109
+			    location   	(943, 2460)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    InterObjView 	@97
+			    height     	60
+			    y_coord    	0
+			    Nested     	TRUE))
+		    (object InterObjView "Список каталогов" @110
+			location   	(1560, 225)
+			font       	(object Font
+			    charSet    	204
+			    underline  	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@110
+			    location   	(1560, 225)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	438
+			    justify    	0
+			    label      	"Список каталогов")
+			stereotype 	TRUE
+			icon_style 	"Icon"
+			quidu      	"5168E0540237"
+			width      	456
+			height     	2505
+			icon_height 	0
+			icon_width 	0
+			annotation 	1
+			Focus_Of_Control 	(object Focus_Of_Control "" @111
+			    location   	(1560, 706)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    InterObjView 	@110
+			    height     	60
+			    y_coord    	0
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @112
+			    location   	(1560, 911)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    InterObjView 	@110
+			    height     	120
+			    y_coord    	60
+			    Nested     	FALSE))
+		    (object InterObjView "Список товаров" @113
+			location   	(2025, 225)
+			font       	(object Font
+			    charSet    	204
+			    underline  	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@113
+			    location   	(2025, 225)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	384
+			    justify    	0
+			    label      	"Список товаров")
+			stereotype 	TRUE
+			icon_style 	"Icon"
+			quidu      	"5168E0640175"
+			width      	402
+			height     	2505
+			icon_height 	0
+			icon_width 	0
+			annotation 	1
+			Focus_Of_Control 	(object Focus_Of_Control "" @114
+			    location   	(2025, 1219)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    InterObjView 	@113
+			    height     	60
+			    y_coord    	0
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @115
+			    location   	(2025, 1358)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    InterObjView 	@113
+			    height     	120
+			    y_coord    	60
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @116
+			    location   	(2025, 1635)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    InterObjView 	@113
+			    height     	60
+			    y_coord    	0
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @117
+			    location   	(2025, 1781)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    InterObjView 	@113
+			    height     	120
+			    y_coord    	60
+			    Nested     	FALSE))
+		    (object InterObjView "Корзина" @118
+			location   	(2808, 225)
+			font       	(object Font
+			    charSet    	204
+			    underline  	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@118
+			    location   	(2808, 225)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	282
+			    justify    	0
+			    label      	"Корзина")
+			stereotype 	TRUE
+			icon_style 	"Icon"
+			quidu      	"5168E06F01EE"
+			width      	300
+			height     	2505
+			icon_height 	0
+			icon_width 	0
+			annotation 	1
+			Focus_Of_Control 	(object Focus_Of_Control "" @119
+			    location   	(2808, 2200)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    InterObjView 	@118
+			    height     	380
+			    y_coord    	320
+			    Nested     	FALSE))
+		    (object InterObjView "Товар" @120
+			location   	(2424, 225)
+			font       	(object Font
+			    charSet    	204
+			    underline  	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@120
+			    location   	(2424, 225)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	282
+			    justify    	0
+			    label      	"Товар")
+			stereotype 	TRUE
+			icon_style 	"Icon"
+			quidu      	"5168E36D004A"
+			width      	300
+			height     	2505
+			icon_height 	0
+			icon_width 	0
+			annotation 	1
+			Focus_Of_Control 	(object Focus_Of_Control "" @121
+			    location   	(2424, 1781)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    InterObjView 	@120
+			    height     	60
+			    y_coord    	0
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @122
+			    location   	(2424, 1920)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    InterObjView 	@120
+			    height     	120
+			    y_coord    	60
+			    Nested     	FALSE))
+		    (object InterMessView "" @123
+			location   	(0, 470)
+			label      	(object SegLabel @124
+			    Parent_View 	@123
+			    location   	(380, 435)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    quidu      	"5168E08E0358"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	385
+			    justify    	0
+			    label      	"Begin_to_work( )"
+			    pctDist    	0.000000
+			    height     	36
+			    orientation 	0)
+			stereotype 	TRUE
+			icon_style 	"Icon"
+			client     	@92
+			supplier   	@97
+			Focus_Src  	@93
+			Focus_Entry 	@98
+			origin     	(380, 470)
+			terminus   	(927, 470)
+			ordinal    	0)
+		    (object InterMessView "" @125
+			location   	(0, 706)
+			label      	(object SegLabel @126
+			    Parent_View 	@125
+			    location   	(959, 648)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    quidu      	"5168E118035F"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	524
+			    justify    	0
+			    label      	"To_reload_catalogues( )"
+			    pctDist    	0.000000
+			    height     	59
+			    orientation 	0)
+			stereotype 	TRUE
+			icon_style 	"Icon"
+			client     	@97
+			supplier   	@110
+			Focus_Src  	@99
+			Focus_Entry 	@111
+			origin     	(959, 706)
+			terminus   	(1544, 706)
+			ordinal    	1)
+		    (object InterMessView "" @127
+			location   	(0, 911)
+			label      	(object SegLabel @128
+			    Parent_View 	@127
+			    location   	(1544, 875)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    quidu      	"5168E14A013D"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	660
+			    justify    	0
+			    label      	"To_display catalogues(List_of_Catalogues)"
+			    pctDist    	0.000000
+			    height     	37
+			    orientation 	1)
+			stereotype 	TRUE
+			icon_style 	"Icon"
+			client     	@110
+			supplier   	@97
+			Focus_Src  	@112
+			Focus_Entry 	@100
+			origin     	(1544, 911)
+			terminus   	(959, 911)
+			ordinal    	2)
+		    (object InterMessView "" @129
+			location   	(0, 1063)
+			label      	(object SegLabel @130
+			    Parent_View 	@129
+			    location   	(380, 1019)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    quidu      	"5168E16D02AC"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	524
+			    justify    	0
+			    label      	"To_select_catalogues( )"
+			    pctDist    	0.000000
+			    height     	45
+			    orientation 	0)
+			stereotype 	TRUE
+			icon_style 	"Icon"
+			client     	@92
+			supplier   	@97
+			Focus_Src  	@94
+			Focus_Entry 	@101
+			origin     	(380, 1063)
+			terminus   	(927, 1063)
+			ordinal    	3)
+		    (object InterMessView "" @131
+			location   	(0, 1219)
+			label      	(object SegLabel @132
+			    Parent_View 	@131
+			    location   	(959, 1177)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    quidu      	"5168E19903C1"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	430
+			    justify    	0
+			    label      	"Get_goods(Integer)"
+			    pctDist    	0.000000
+			    height     	43
+			    orientation 	0)
+			stereotype 	TRUE
+			icon_style 	"Icon"
+			client     	@97
+			supplier   	@113
+			Focus_Src  	@102
+			Focus_Entry 	@114
+			origin     	(959, 1219)
+			terminus   	(2009, 1219)
+			ordinal    	4)
+		    (object NoteView @133
+			location   	(677, 2673)
+			label      	(object ItemLabel
+			    Parent_View 	@133
+			    location   	(511, 2614)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    nlines     	2
+			    max_width  	296
+			    label      	"Повторять")
+			stereotype 	TRUE
+			icon_style 	"Icon"
+			width      	356
+			height     	131)
+		    (object InterMessView "" @134
+			location   	(0, 1358)
+			label      	(object SegLabel @135
+			    Parent_View 	@134
+			    location   	(2009, 1316)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    quidu      	"5168E3E803D8"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	549
+			    justify    	0
+			    label      	"To_display_goods(List_of_Goods)"
+			    pctDist    	0.000000
+			    height     	43
+			    orientation 	1)
+			stereotype 	TRUE
+			icon_style 	"Icon"
+			client     	@113
+			supplier   	@97
+			Focus_Src  	@115
+			Focus_Entry 	@103
+			origin     	(2009, 1358)
+			terminus   	(959, 1358)
+			ordinal    	5)
+		    (object InterMessView "" @136
+			location   	(0, 1507)
+			label      	(object SegLabel @137
+			    Parent_View 	@136
+			    location   	(380, 1469)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    quidu      	"5168E3FD0268"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	427
+			    justify    	0
+			    label      	"To_select_goods( )"
+			    pctDist    	0.000000
+			    height     	39
+			    orientation 	0)
+			stereotype 	TRUE
+			icon_style 	"Icon"
+			client     	@92
+			supplier   	@97
+			Focus_Src  	@95
+			Focus_Entry 	@104
+			origin     	(380, 1507)
+			terminus   	(927, 1507)
+			ordinal    	6)
+		    (object InterMessView "" @138
+			location   	(0, 1635)
+			label      	(object SegLabel @139
+			    Parent_View 	@138
+			    location   	(959, 1591)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    quidu      	"5168E44702E7"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	278
+			    justify    	0
+			    label      	"To_search_goods(Integer)"
+			    pctDist    	0.000000
+			    height     	45
+			    orientation 	0)
+			stereotype 	TRUE
+			icon_style 	"Icon"
+			client     	@97
+			supplier   	@113
+			Focus_Src  	@105
+			Focus_Entry 	@116
+			origin     	(959, 1635)
+			terminus   	(2009, 1635)
+			ordinal    	7)
+		    (object InterMessView "" @140
+			location   	(0, 1781)
+			label      	(object SegLabel @141
+			    Parent_View 	@140
+			    location   	(2041, 1737)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    quidu      	"5168E47F0079"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	406
+			    justify    	0
+			    label      	"Get_information( )"
+			    pctDist    	0.000000
+			    height     	45
+			    orientation 	0)
+			stereotype 	TRUE
+			icon_style 	"Icon"
+			client     	@113
+			supplier   	@120
+			Focus_Src  	@117
+			Focus_Entry 	@121
+			origin     	(2041, 1781)
+			terminus   	(2408, 1781)
+			ordinal    	8)
+		    (object InterMessView "" @142
+			location   	(0, 1920)
+			label      	(object SegLabel @143
+			    Parent_View 	@142
+			    location   	(2408, 1876)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    quidu      	"5168E4AD0170"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	608
+			    justify    	0
+			    label      	"To_display_information_of_goods(Goods)"
+			    pctDist    	0.000000
+			    height     	45
+			    orientation 	1)
+			stereotype 	TRUE
+			icon_style 	"Icon"
+			client     	@120
+			supplier   	@97
+			Focus_Src  	@122
+			Focus_Entry 	@106
+			origin     	(2408, 1920)
+			terminus   	(959, 1920)
+			ordinal    	9)
+		    (object InterMessView "" @144
+			location   	(0, 2054)
+			label      	(object SegLabel @145
+			    Parent_View 	@144
+			    location   	(380, 2007)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    quidu      	"5168E4DF004C"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	427
+			    justify    	0
+			    label      	"To_order_goods( )"
+			    pctDist    	0.000000
+			    height     	48
+			    orientation 	0)
+			stereotype 	TRUE
+			icon_style 	"Icon"
+			client     	@92
+			supplier   	@97
+			Focus_Src  	@96
+			Focus_Entry 	@107
+			origin     	(380, 2054)
+			terminus   	(927, 2054)
+			ordinal    	10)
+		    (object InterMessView "" @146
+			location   	(0, 2200)
+			label      	(object SegLabel @147
+			    Parent_View 	@146
+			    location   	(959, 2156)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    quidu      	"5168E51F00DE"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	680
+			    justify    	0
+			    label      	"To_add_goods(Integer, Integer)"
+			    pctDist    	0.000000
+			    height     	45
+			    orientation 	0)
+			stereotype 	TRUE
+			icon_style 	"Icon"
+			client     	@97
+			supplier   	@118
+			Focus_Src  	@108
+			Focus_Entry 	@119
+			origin     	(959, 2200)
+			terminus   	(2792, 2200)
+			ordinal    	11)
+		    (object SelfMessView "" @148
+			location   	(0, 2278)
+			label      	(object SegLabel @149
+			    Parent_View 	@148
+			    location   	(2974, 2234)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    quidu      	"5168E55D02A8"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	267
+			    justify    	0
+			    label      	"Refresh( )"
+			    pctDist    	1.000000
+			    height     	45
+			    orientation 	0)
+			stereotype 	TRUE
+			icon_style 	"Icon"
+			client     	@118
+			supplier   	@118
+			Focus_Src  	@119
+			origin     	(2824, 2278)
+			terminus   	(2974, 2278)
+			ordinal    	12)
+		    (object InterMessView "" @150
+			location   	(0, 2460)
+			label      	(object SegLabel @151
+			    Parent_View 	@150
+			    location   	(2792, 2416)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    quidu      	"5168E5C20125"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	611
+			    justify    	0
+			    label      	"To_display_basket(Basket)"
+			    pctDist    	0.000000
+			    height     	45
+			    orientation 	1)
+			stereotype 	TRUE
+			icon_style 	"Icon"
+			client     	@118
+			supplier   	@97
+			Focus_Src  	@119
+			Focus_Entry 	@109
+			origin     	(2792, 2460)
+			terminus   	(959, 2460)
+			ordinal    	13)
+		    (object AttachView "" @152
+			stereotype 	TRUE
+			icon_style 	"Icon"
+			client     	@133
+			supplier   	@150
+			line_style 	0)
+		    (object AttachView "" @153
+			stereotype 	TRUE
+			icon_style 	"Icon"
+			client     	@129
+			supplier   	@133
+			line_style 	0)))
+	    (object ObjectDiagram "Наполнить виртуальную корзину"
+		mechanism_ref 	@1
+		quid       	"51BD2E420019"
+		title      	"Наполнить виртуальную корзину"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list
+		    (object ObjectView "$UNNAMED$51" @154
+			location   	(242, 950)
+			font       	(object Font
+			    charSet    	204
+			    underline  	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@154
+			    location   	(161, 893)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    nlines     	2
+			    max_width  	162
+			    justify    	0
+			    label      	"")
+			stereotype 	TRUE
+			icon_style 	"Icon"
+			quidu      	"5168E03602CF"
+			height     	142
+			annotation 	4
+			autoResize 	TRUE
+			subobjects 	0
+			x_offset   	0.000000
+			y_offset   	0.000000)
+		    (object ObjectView "Форма для работы с корзиной" @155
+			location   	(3013, 275)
+			font       	(object Font
+			    charSet    	204
+			    underline  	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@155
+			    location   	(2671, 218)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    nlines     	2
+			    max_width  	684
+			    justify    	0
+			    label      	"Форма для работы с корзиной")
+			stereotype 	TRUE
+			icon_style 	"Icon"
+			quidu      	"5168E03C021E"
+			width      	702
+			height     	142
+			annotation 	4
+			autoResize 	TRUE
+			subobjects 	0
+			x_offset   	0.000000
+			y_offset   	0.000000)
+		    (object ObjectView "Список каталогов" @156
+			location   	(515, 117)
+			font       	(object Font
+			    charSet    	204
+			    underline  	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@156
+			    location   	(287, 60)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    nlines     	2
+			    max_width  	456
+			    justify    	0
+			    label      	"Список каталогов")
+			stereotype 	TRUE
+			icon_style 	"Icon"
+			quidu      	"5168E0540237"
+			width      	474
+			height     	142
+			annotation 	4
+			autoResize 	TRUE
+			subobjects 	0
+			x_offset   	-0.080000
+			y_offset   	0.110000)
+		    (object ObjectView "Список товаров" @157
+			location   	(2759, 1848)
+			font       	(object Font
+			    charSet    	204
+			    underline  	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@157
+			    location   	(2559, 1791)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    nlines     	2
+			    max_width  	400
+			    justify    	0
+			    label      	"Список товаров")
+			stereotype 	TRUE
+			icon_style 	"Icon"
+			quidu      	"5168E0640175"
+			width      	418
+			height     	142
+			annotation 	4
+			autoResize 	TRUE
+			subobjects 	0
+			x_offset   	0.000000
+			y_offset   	0.000000)
+		    (object ObjectView "Корзина" @158
+			location   	(278, 1451)
+			font       	(object Font
+			    charSet    	204
+			    underline  	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@158
+			    location   	(169, 1394)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    nlines     	2
+			    max_width  	218
+			    justify    	0
+			    label      	"Корзина")
+			stereotype 	TRUE
+			icon_style 	"Icon"
+			quidu      	"5168E06F01EE"
+			width      	236
+			height     	142
+			annotation 	4
+			autoResize 	TRUE
+			subobjects 	0
+			x_offset   	-0.080000
+			y_offset   	0.110000)
+		    (object ObjectView "Товар" @159
+			location   	(826, 1928)
+			font       	(object Font
+			    charSet    	204
+			    underline  	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@159
+			    location   	(728, 1871)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    nlines     	2
+			    max_width  	196
+			    justify    	0
+			    label      	"Товар")
+			stereotype 	TRUE
+			icon_style 	"Icon"
+			quidu      	"5168E36D004A"
+			width      	214
+			height     	142
+			annotation 	4
+			autoResize 	TRUE
+			subobjects 	0
+			x_offset   	0.000000
+			y_offset   	0.000000)
+		    (object LinkSelfView "" @160
+			location   	(278, 1230)
+			stereotype 	TRUE
+			icon_style 	"Icon"
+			quidu      	"5168E55D02A7"
+			client     	@158
+			supplier   	@158
+			line_style 	0)
+		    (object MessView "" @161
+			location   	(278, 1186)
+			stereotype 	TRUE
+			icon_style 	"Icon"
+			label      	(object SegLabel @162
+			    Parent_View 	@161
+			    location   	(278, 1142)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    quidu      	"5168E55D02A8"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	297
+			    justify    	0
+			    label      	"Refresh( )"
+			    pctDist    	0.500000
+			    height     	45
+			    orientation 	0)
+			object_arc 	@160
+			pctDist    	0.500000
+			height     	45
+			orientation 	0
+			dir        	1
+			origin     	(218, 1186)
+			terminus   	(338, 1186))
+		    (object LinkView "" @163
+			stereotype 	TRUE
+			icon_style 	"Icon"
+			quidu      	"5168E08E0357"
+			client     	@154
+			supplier   	@155
+			line_style 	0)
+		    (object MessView "" @164
+			location   	(1513, 593)
+			stereotype 	TRUE
+			icon_style 	"Icon"
+			label      	(object SegLabel @165
+			    Parent_View 	@164
+			    location   	(1504, 382)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    quidu      	"5168E08E0358"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	428
+			    justify    	0
+			    label      	"Begin_to_work( )"
+			    pctDist    	0.500000
+			    height     	45
+			    orientation 	0)
+			label      	(object SegLabel @166
+			    Parent_View 	@164
+			    location   	(1504, 438)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    quidu      	"5168E16D02AC"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	569
+			    justify    	0
+			    label      	"To_select_catalogues( )"
+			    pctDist    	0.500000
+			    height     	45
+			    orientation 	0)
+			label      	(object SegLabel @167
+			    Parent_View 	@164
+			    location   	(1504, 494)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    quidu      	"5168E3FD0268"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	469
+			    justify    	0
+			    label      	"To_select_goods( )"
+			    pctDist    	0.500000
+			    height     	45
+			    orientation 	0)
+			label      	(object SegLabel @168
+			    Parent_View 	@164
+			    location   	(1504, 550)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    quidu      	"5168E4DF004C"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	481
+			    justify    	0
+			    label      	"To_order_goods( )"
+			    pctDist    	0.500000
+			    height     	45
+			    orientation 	0)
+			object_arc 	@163
+			pctDist    	0.500000
+			height     	45
+			orientation 	0
+			dir        	1
+			origin     	(1455, 606)
+			terminus   	(1571, 580))
+		    (object LinkView "" @169
+			stereotype 	TRUE
+			icon_style 	"Icon"
+			quidu      	"5168E118035E"
+			client     	@155
+			supplier   	@156
+			line_style 	0)
+		    (object MessView "" @170
+			location   	(1705, 237)
+			stereotype 	TRUE
+			icon_style 	"Icon"
+			label      	(object SegLabel @171
+			    Parent_View 	@170
+			    location   	(1704, 282)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    quidu      	"5168E118035F"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	578
+			    justify    	0
+			    label      	"To_reload_catalogues( )"
+			    pctDist    	0.500000
+			    height     	45
+			    orientation 	0)
+			object_arc 	@169
+			pctDist    	0.500000
+			height     	45
+			orientation 	0
+			dir        	1
+			origin     	(1764, 240)
+			terminus   	(1646, 234))
+		    (object MessView "" @172
+			location   	(1710, 148)
+			stereotype 	TRUE
+			icon_style 	"Icon"
+			label      	(object SegLabel @173
+			    Parent_View 	@172
+			    location   	(1713, 104)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    quidu      	"5168E14A013D"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	994
+			    justify    	0
+			    label      	"To_display catalogues(List_of_Catalogues)"
+			    pctDist    	0.500000
+			    height     	45
+			    orientation 	0)
+			object_arc 	@169
+			pctDist    	0.500000
+			height     	45
+			orientation 	1
+			dir        	-1
+			origin     	(1650, 144)
+			terminus   	(1770, 152))
+		    (object LinkView "" @174
+			stereotype 	TRUE
+			icon_style 	"Icon"
+			quidu      	"5168E19903C0"
+			client     	@155
+			supplier   	@157
+			line_style 	0)
+		    (object MessView "" @175
+			location   	(2929, 1068)
+			stereotype 	TRUE
+			icon_style 	"Icon"
+			label      	(object SegLabel @176
+			    Parent_View 	@175
+			    location   	(2973, 1074)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    quidu      	"5168E19903C1"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	478
+			    justify    	0
+			    label      	"Get_goods(Integer)"
+			    pctDist    	0.500000
+			    height     	45
+			    orientation 	0)
+			label      	(object SegLabel @177
+			    Parent_View 	@175
+			    location   	(2973, 1130)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    quidu      	"5168E44702E7"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	622
+			    justify    	0
+			    label      	"To_search_goods(Integer)"
+			    pctDist    	0.500000
+			    height     	45
+			    orientation 	0)
+			object_arc 	@174
+			pctDist    	0.500000
+			height     	45
+			orientation 	0
+			dir        	1
+			origin     	(2938, 1009)
+			terminus   	(2920, 1127))
+		    (object MessView "" @178
+			location   	(2842, 1055)
+			stereotype 	TRUE
+			icon_style 	"Icon"
+			label      	(object SegLabel @179
+			    Parent_View 	@178
+			    location   	(2799, 1048)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    quidu      	"5168E3E803D8"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	806
+			    justify    	0
+			    label      	"To_display_goods(List_of_Goods)"
+			    pctDist    	0.500000
+			    height     	45
+			    orientation 	0)
+			object_arc 	@174
+			pctDist    	0.500000
+			height     	45
+			orientation 	1
+			dir        	-1
+			origin     	(2832, 1113)
+			terminus   	(2852, 997))
+		    (object LinkView "" @180
+			stereotype 	TRUE
+			icon_style 	"Icon"
+			quidu      	"5168E20503E4"
+			client     	@155
+			supplier   	@158
+			line_style 	0)
+		    (object MessView "" @181
+			location   	(1638, 913)
+			stereotype 	TRUE
+			icon_style 	"Icon"
+			label      	(object SegLabel @182
+			    Parent_View 	@181
+			    location   	(937, 1218)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    quidu      	"5168E51F00DE"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	756
+			    justify    	0
+			    label      	"To_add_goods(Integer, Integer)"
+			    pctDist    	6.968213
+			    height     	5
+			    orientation 	1)
+			object_arc 	@180
+			pctDist    	0.500000
+			height     	45
+			orientation 	0
+			dir        	1
+			origin     	(1692, 889)
+			terminus   	(1584, 937))
+		    (object MessView "" @183
+			location   	(1603, 832)
+			stereotype 	TRUE
+			icon_style 	"Icon"
+			label      	(object SegLabel @184
+			    Parent_View 	@183
+			    location   	(1886, 740)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    quidu      	"5168E5C20125"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	672
+			    justify    	0
+			    label      	"To_display_basket(Basket)"
+			    pctDist    	2.987479
+			    height     	24
+			    orientation 	1)
+			object_arc 	@180
+			pctDist    	0.500000
+			height     	45
+			orientation 	1
+			dir        	-1
+			origin     	(1548, 855)
+			terminus   	(1658, 809))
+		    (object LinkView "" @185
+			stereotype 	TRUE
+			icon_style 	"Icon"
+			quidu      	"5168E47F0078"
+			client     	@157
+			supplier   	@159
+			line_style 	0)
+		    (object MessView "" @186
+			location   	(1743, 1934)
+			stereotype 	TRUE
+			icon_style 	"Icon"
+			label      	(object SegLabel @187
+			    Parent_View 	@186
+			    location   	(1745, 1979)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    quidu      	"5168E47F0079"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	450
+			    justify    	0
+			    label      	"Get_information( )"
+			    pctDist    	0.500000
+			    height     	45
+			    orientation 	0)
+			object_arc 	@185
+			pctDist    	0.500000
+			height     	45
+			orientation 	0
+			dir        	1
+			origin     	(1802, 1931)
+			terminus   	(1684, 1937))
+		    (object LinkView "" @188
+			stereotype 	TRUE
+			icon_style 	"Icon"
+			quidu      	"5168E4AD016F"
+			client     	@159
+			supplier   	@155
+			line_style 	0)
+		    (object MessView "" @189
+			location   	(1891, 1066)
+			stereotype 	TRUE
+			icon_style 	"Icon"
+			label      	(object SegLabel @190
+			    Parent_View 	@189
+			    location   	(1865, 1031)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    quidu      	"5168E4AD0170"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	997
+			    justify    	0
+			    label      	"To_display_information_of_goods(Goods)"
+			    pctDist    	0.500000
+			    height     	45
+			    orientation 	0)
+			object_arc 	@188
+			pctDist    	0.500000
+			height     	45
+			orientation 	0
+			dir        	1
+			origin     	(1843, 1101)
+			terminus   	(1939, 1031))))))
+    root_category 	(object Class_Category "Logical View"
+	quid       	"513E8E3202FE"
+	exportControl 	"Public"
+	global     	TRUE
+	subsystem  	"Component View"
+	quidu      	"513E8E320300"
+	logical_models 	(list unit_reference_list
+	    (object Association "$UNNAMED$52"
+		quid       	"517B502B0317"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$53"
+			quid       	"517B502C00E4"
+			supplier   	"Logical View::Entities::Basket"
+			quidu      	"5174391000CF"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$54"
+			quid       	"517B502C00E7"
+			supplier   	"Logical View::Boundaries::Forma_for_Basket"
+			quidu      	"517438D1002E")))
+	    (object Association "$UNNAMED$55"
+		quid       	"517B503101B4"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$56"
+			quid       	"517B503103CD"
+			supplier   	"Logical View::Boundaries::Forma_for_Basket"
+			quidu      	"517438D1002E"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$57"
+			quid       	"517B503103D3"
+			supplier   	"Logical View::Users::Buyer"
+			quidu      	"5177546E03BC")))
+	    (object Association "$UNNAMED$58"
+		quid       	"517B503A0092"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$59"
+			quid       	"517B503A0290"
+			supplier   	"Logical View::Entities::List_of_Goods"
+			quidu      	"517438FA0096"
+			is_navigable 	TRUE
+			is_aggregate 	TRUE)
+		    (object Role "$UNNAMED$60"
+			quid       	"517B503A0293"
+			supplier   	"Logical View::Entities::List_of_Catalogues"
+			quidu      	"517438EA0117"
+			is_navigable 	TRUE)))
+	    (object Association "$UNNAMED$61"
+		quid       	"517B503D01DC"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$62"
+			quid       	"517B503E0020"
+			supplier   	"Logical View::Entities::Goods"
+			quidu      	"517438FF0327"
+			is_navigable 	TRUE
+			is_aggregate 	TRUE)
+		    (object Role "$UNNAMED$63"
+			quid       	"517B503E0026"
+			supplier   	"Logical View::Entities::List_of_Goods"
+			quidu      	"517438FA0096"
+			is_navigable 	TRUE)))
+	    (object Association "$UNNAMED$64"
+		quid       	"517B5041039F"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$65"
+			quid       	"517B50430135"
+			supplier   	"Logical View::Entities::List_of_Catalogues"
+			quidu      	"517438EA0117"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$66"
+			quid       	"517B5043013A"
+			supplier   	"Logical View::Boundaries::Forma_for_Basket"
+			quidu      	"517438D1002E")))
+	    (object Class_Category "Entities"
+		quid       	"517433F802B5"
+		exportControl 	"Public"
+		logical_models 	(list unit_reference_list
+		    (object Class "List_of_Catalogues"
+			quid       	"517438EA0117"
+			stereotype 	"Entity"
+			operations 	(list Operations
+			    (object Operation "To_reload_catalogues"
+				quid       	"51774E5F01BE"
+				result     	"List_of_Catalogues"
+				concurrency 	"Sequential"
+				opExportControl 	"Public"
+				uid        	0)))
+		    (object Class "List_of_Goods"
+			quid       	"517438FA0096"
+			stereotype 	"Entity"
+			operations 	(list Operations
+			    (object Operation "To_display_goods"
+				quid       	"51774F7D00F5"
+				result     	"Boolean"
+				concurrency 	"Sequential"
+				opExportControl 	"Public"
+				uid        	0)
+			    (object Operation "Get_goods"
+				quid       	"51774F9901B6"
+				parameters 	(list Parameters
+				    (object Parameter "N_list_goods"
+					type       	"Integer"))
+				result     	"List_of_Goods"
+				concurrency 	"Sequential"
+				opExportControl 	"Public"
+				uid        	0)
+			    (object Operation "To_search_goods"
+				quid       	"51774FBD03C5"
+				parameters 	(list Parameters
+				    (object Parameter "N_goods"
+					type       	"Integer"))
+				result     	"Goods"
+				concurrency 	"Sequential"
+				opExportControl 	"Public"
+				uid        	0)))
+		    (object Class "Goods"
+			quid       	"517438FF0327"
+			stereotype 	"Entity"
+			operations 	(list Operations
+			    (object Operation "Get_information"
+				quid       	"51775026017B"
+				result     	"Integer"
+				concurrency 	"Sequential"
+				opExportControl 	"Public"
+				uid        	0)))
+		    (object Class "Basket"
+			quid       	"5174391000CF"
+			stereotype 	"Entity"
+			operations 	(list Operations
+			    (object Operation "To_add_goods"
+				quid       	"5177504F000B"
+				parameters 	(list Parameters
+				    (object Parameter "N_goods"
+					type       	"Integer")
+				    (object Parameter "Count_goods"
+					type       	"Integer"))
+				result     	"Integer"
+				concurrency 	"Sequential"
+				opExportControl 	"Public"
+				uid        	0)
+			    (object Operation "Refresh"
+				quid       	"517750A30074"
+				result     	"Integer"
+				concurrency 	"Sequential"
+				opExportControl 	"Private"
+				uid        	0))
+			class_attributes 	(list class_attribute_list
+			    (object ClassAttribute "Num_basket"
+				quid       	"517752EC0328"
+				type       	"Integer"
+				initv      	"1"))))
+		logical_presentations 	(list unit_reference_list))
+	    (object Class_Category "Boundaries"
+		quid       	"5174340E023D"
+		visible_categories 	(list visibility_relationship_list
+		    (object Visibility_Relationship
+			quid       	"517B50AD0246"
+			supplier   	"Logical View::Entities"
+			quidu      	"517433F802B5"))
+		exportControl 	"Public"
+		logical_models 	(list unit_reference_list
+		    (object Class "Forma_for_Basket"
+			quid       	"517438D1002E"
+			stereotype 	"Boundary"
+			operations 	(list Operations
+			    (object Operation "Begin_to_work"
+				quid       	"51743B10001F"
+				result     	"Integer"
+				concurrency 	"Sequential"
+				opExportControl 	"Public"
+				uid        	0)
+			    (object Operation "To_display catalogues"
+				quid       	"51743BB90097"
+				parameters 	(list Parameters
+				    (object Parameter "List_catalogues"
+					type       	"List_of_Catalogues"))
+				result     	"Integer"
+				concurrency 	"Sequential"
+				opExportControl 	"Public"
+				uid        	0)
+			    (object Operation "To_select_catalogues"
+				quid       	"51774D0400F1"
+				result     	"Integer"
+				concurrency 	"Sequential"
+				opExportControl 	"Public"
+				uid        	0)
+			    (object Operation "To_display_goods"
+				quid       	"51774D17004F"
+				parameters 	(list Parameters
+				    (object Parameter "List_goods"
+					type       	"List_of_Goods"))
+				result     	"Integer"
+				concurrency 	"Sequential"
+				opExportControl 	"Public"
+				uid        	0)
+			    (object Operation "To_display_information_of_goods"
+				quid       	"51774D4E03B5"
+				parameters 	(list Parameters
+				    (object Parameter "Selected_goods"
+					type       	"Goods"))
+				result     	"Integer"
+				concurrency 	"Sequential"
+				opExportControl 	"Public"
+				uid        	0)
+			    (object Operation "To_order_goods"
+				quid       	"51774DE902BA"
+				result     	"Integer"
+				concurrency 	"Sequential"
+				opExportControl 	"Public"
+				uid        	0)
+			    (object Operation "To_display_basket"
+				quid       	"51774E240340"
+				parameters 	(list Parameters
+				    (object Parameter "Basket"
+					type       	"Basket"))
+				result     	"Integer"
+				concurrency 	"Sequential"
+				opExportControl 	"Public"
+				uid        	0)
+			    (object Operation "To_select_goods"
+				quid       	"517752090022"
+				result     	"Integer"
+				concurrency 	"Sequential"
+				opExportControl 	"Public"
+				uid        	0))))
+		logical_presentations 	(list unit_reference_list))
+	    (object Class_Category "Users"
+		quid       	"517754A30027"
+		visible_categories 	(list visibility_relationship_list
+		    (object Visibility_Relationship
+			quid       	"517B509D01D6"
+			supplier   	"Logical View::Boundaries"
+			quidu      	"5174340E023D"))
+		exportControl 	"Public"
+		logical_models 	(list unit_reference_list
+		    (object Class "Buyer"
+			quid       	"5177546E03BC"
+			stereotype 	"Users")
+		    (object Class "Permanent_Buyer "
+			quid       	"517754BC03CE"
+			stereotype 	"Users"
+			superclasses 	(list inheritance_relationship_list
+			    (object Inheritance_Relationship
+				quid       	"517B50350196"
+				supplier   	"Logical View::Users::Buyer"
+				quidu      	"5177546E03BC"))))
+		logical_presentations 	(list unit_reference_list)))
+	logical_presentations 	(list unit_reference_list
+	    (object ClassDiagram "Наполнить виртуальную корзину"
+		quid       	"5174361A0220"
+		title      	"Наполнить виртуальную корзину"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	77
+		items      	(list diagram_item_list
+		    (object ClassView "Class" "Logical View::Users::Permanent_Buyer " @191
+			ShowCompartmentStereotypes 	TRUE
+			IncludeAttribute 	TRUE
+			IncludeOperation 	TRUE
+			location   	(1323, 3708)
+			label      	(object ItemLabel
+			    Parent_View 	@191
+			    location   	(1110, 3653)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    nlines     	1
+			    max_width  	426
+			    justify    	0
+			    label      	"Permanent_Buyer ")
+			stereotype 	(object ItemLabel
+			    Parent_View 	@191
+			    location   	(1110, 3603)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    anchor     	10
+			    nlines     	1
+			    max_width  	426
+			    justify    	0
+			    label      	"<<Users>>")
+			icon_style 	"Icon"
+			quidu      	"517754BC03CE"
+			width      	444
+			height     	238
+			annotation 	8
+			autoResize 	TRUE)
+		    (object ClassView "Class" "Logical View::Entities::Goods" @192
+			ShowCompartmentStereotypes 	TRUE
+			IncludeAttribute 	TRUE
+			IncludeOperation 	TRUE
+			ShowOperationSignature 	TRUE
+			location   	(1652, 231)
+			label      	(object ItemLabel
+			    Parent_View 	@192
+			    location   	(1211, 139)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    nlines     	1
+			    max_width  	882
+			    justify    	0
+			    label      	"Goods")
+			stereotype 	(object ItemLabel
+			    Parent_View 	@192
+			    location   	(1211, 89)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    anchor     	10
+			    nlines     	1
+			    max_width  	882
+			    justify    	0
+			    label      	"<<Entity>>")
+			icon_style 	"Icon"
+			quidu      	"517438FF0327"
+			compartment 	(object Compartment
+			    Parent_View 	@192
+			    location   	(1211, 253)
+			    font       	(object Font
+				size       	10
+				charSet    	204)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    anchor     	2
+			    nlines     	2
+			    max_width  	528)
+			width      	900
+			height     	312
+			annotation 	8
+			autoResize 	TRUE)
+		    (object ClassView "Class" "Logical View::Entities::List_of_Goods" @193
+			ShowCompartmentStereotypes 	TRUE
+			IncludeAttribute 	TRUE
+			IncludeOperation 	TRUE
+			ShowOperationSignature 	TRUE
+			location   	(1652, 896)
+			label      	(object ItemLabel
+			    Parent_View 	@193
+			    location   	(999, 751)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    nlines     	1
+			    max_width  	1307
+			    justify    	0
+			    label      	"List_of_Goods")
+			stereotype 	(object ItemLabel
+			    Parent_View 	@193
+			    location   	(999, 701)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    anchor     	10
+			    nlines     	1
+			    max_width  	1307
+			    justify    	0
+			    label      	"<<Entity>>")
+			icon_style 	"Icon"
+			quidu      	"517438FA0096"
+			compartment 	(object Compartment
+			    Parent_View 	@193
+			    location   	(999, 865)
+			    font       	(object Font
+				size       	10
+				charSet    	204)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    anchor     	2
+			    nlines     	4
+			    max_width  	971)
+			width      	1325
+			height     	418
+			annotation 	8
+			autoResize 	TRUE)
+		    (object AssociationViewNew "$UNNAMED$61" @194
+			location   	(1652, 536)
+			stereotype 	TRUE
+			icon_style 	"Icon"
+			quidu      	"517B503D01DC"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$62" @195
+				Parent_View 	@194
+				location   	(746, 208)
+				stereotype 	TRUE
+				icon_style 	"Icon"
+				quidu      	"517B503E0020"
+				client     	@194
+				supplier   	@192
+				line_style 	0)
+			    (object RoleView "$UNNAMED$63" @196
+				Parent_View 	@194
+				location   	(746, 208)
+				stereotype 	TRUE
+				icon_style 	"Icon"
+				quidu      	"517B503E0026"
+				client     	@194
+				supplier   	@193
+				line_style 	0)))
+		    (object ClassView "Class" "Logical View::Entities::Basket" @197
+			ShowCompartmentStereotypes 	TRUE
+			IncludeAttribute 	TRUE
+			IncludeOperation 	TRUE
+			ShowOperationSignature 	TRUE
+			location   	(707, 1604)
+			label      	(object ItemLabel
+			    Parent_View 	@197
+			    location   	(84, 1469)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    nlines     	1
+			    max_width  	1246
+			    justify    	0
+			    label      	"Basket")
+			stereotype 	(object ItemLabel
+			    Parent_View 	@197
+			    location   	(84, 1419)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    anchor     	10
+			    nlines     	1
+			    max_width  	1246
+			    justify    	0
+			    label      	"<<Entity>>")
+			icon_style 	"Icon"
+			quidu      	"5174391000CF"
+			compartment 	(object Compartment
+			    Parent_View 	@197
+			    location   	(84, 1583)
+			    font       	(object Font
+				size       	10
+				charSet    	204)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    anchor     	2
+			    nlines     	4
+			    max_width  	0)
+			width      	1264
+			height     	398
+			annotation 	8
+			autoResize 	TRUE)
+		    (object ClassView "Class" "Logical View::Users::Buyer" @198
+			ShowCompartmentStereotypes 	TRUE
+			IncludeAttribute 	TRUE
+			IncludeOperation 	TRUE
+			location   	(1323, 3170)
+			label      	(object ItemLabel
+			    Parent_View 	@198
+			    location   	(1231, 3115)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    nlines     	1
+			    max_width  	184
+			    justify    	0
+			    label      	"Buyer")
+			stereotype 	(object ItemLabel
+			    Parent_View 	@198
+			    location   	(1231, 3065)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    anchor     	10
+			    nlines     	1
+			    max_width  	184
+			    justify    	0
+			    label      	"<<Users>>")
+			icon_style 	"Icon"
+			quidu      	"5177546E03BC"
+			width      	202
+			height     	238
+			annotation 	8
+			autoResize 	TRUE)
+		    (object InheritView "" @199
+			stereotype 	TRUE
+			icon_style 	"Icon"
+			quidu      	"517B50350196"
+			client     	@191
+			supplier   	@198
+			line_style 	0)
+		    (object ClassView "Class" "Logical View::Entities::List_of_Catalogues" @200
+			ShowCompartmentStereotypes 	TRUE
+			IncludeAttribute 	TRUE
+			IncludeOperation 	TRUE
+			ShowOperationSignature 	TRUE
+			location   	(1939, 1552)
+			label      	(object ItemLabel
+			    Parent_View 	@200
+			    location   	(1498, 1469)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    nlines     	1
+			    max_width  	882
+			    justify    	0
+			    label      	"List_of_Catalogues")
+			stereotype 	(object ItemLabel
+			    Parent_View 	@200
+			    location   	(1498, 1419)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    anchor     	10
+			    nlines     	1
+			    max_width  	882
+			    justify    	0
+			    label      	"<<Entity>>")
+			icon_style 	"Icon"
+			quidu      	"517438EA0117"
+			compartment 	(object Compartment
+			    Parent_View 	@200
+			    location   	(1498, 1583)
+			    font       	(object Font
+				size       	10
+				charSet    	204)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    anchor     	2
+			    nlines     	2
+			    max_width  	0)
+			width      	900
+			height     	294
+			annotation 	8
+			autoResize 	TRUE)
+		    (object AssociationViewNew "$UNNAMED$58" @201
+			location   	(1807, 1254)
+			stereotype 	TRUE
+			icon_style 	"Icon"
+			quidu      	"517B503A0092"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$59" @202
+				Parent_View 	@201
+				location   	(-281, 651)
+				stereotype 	TRUE
+				icon_style 	"Icon"
+				quidu      	"517B503A0290"
+				client     	@201
+				supplier   	@193
+				line_style 	0)
+			    (object RoleView "$UNNAMED$60" @203
+				Parent_View 	@201
+				location   	(-281, 651)
+				stereotype 	TRUE
+				icon_style 	"Icon"
+				quidu      	"517B503A0293"
+				client     	@201
+				supplier   	@200
+				line_style 	0)))
+		    (object ClassView "Class" "Logical View::Boundaries::Forma_for_Basket" @204
+			ShowCompartmentStereotypes 	TRUE
+			IncludeAttribute 	TRUE
+			IncludeOperation 	TRUE
+			ShowOperationSignature 	TRUE
+			location   	(1323, 2427)
+			label      	(object ItemLabel
+			    Parent_View 	@204
+			    location   	(667, 2167)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    nlines     	1
+			    max_width  	1312
+			    justify    	0
+			    label      	"Forma_for_Basket")
+			stereotype 	(object ItemLabel
+			    Parent_View 	@204
+			    location   	(667, 2117)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    anchor     	10
+			    nlines     	1
+			    max_width  	1312
+			    justify    	0
+			    label      	"<<Boundary>>")
+			icon_style 	"Icon"
+			quidu      	"517438D1002E"
+			compartment 	(object Compartment
+			    Parent_View 	@204
+			    location   	(667, 2281)
+			    font       	(object Font
+				size       	10
+				charSet    	204)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    anchor     	2
+			    nlines     	9
+			    max_width  	0)
+			width      	1330
+			height     	648
+			annotation 	8
+			autoResize 	TRUE)
+		    (object AssociationViewNew "$UNNAMED$52" @205
+			location   	(968, 1952)
+			stereotype 	TRUE
+			icon_style 	"Icon"
+			quidu      	"517B502B0317"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$53" @206
+				Parent_View 	@205
+				location   	(59, 649)
+				stereotype 	TRUE
+				icon_style 	"Icon"
+				quidu      	"517B502C00E4"
+				client     	@205
+				supplier   	@197
+				line_style 	0)
+			    (object RoleView "$UNNAMED$54" @207
+				Parent_View 	@205
+				location   	(59, 649)
+				stereotype 	TRUE
+				icon_style 	"Icon"
+				quidu      	"517B502C00E7"
+				client     	@205
+				supplier   	@204
+				line_style 	0)))
+		    (object AssociationViewNew "$UNNAMED$55" @208
+			location   	(1323, 2900)
+			stereotype 	TRUE
+			icon_style 	"Icon"
+			quidu      	"517B503101B4"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$56" @209
+				Parent_View 	@208
+				location   	(-527, 1794)
+				stereotype 	TRUE
+				icon_style 	"Icon"
+				quidu      	"517B503103CD"
+				client     	@208
+				supplier   	@204
+				line_style 	0)
+			    (object RoleView "$UNNAMED$57" @210
+				Parent_View 	@208
+				location   	(-527, 1794)
+				stereotype 	TRUE
+				icon_style 	"Icon"
+				quidu      	"517B503103D3"
+				client     	@208
+				supplier   	@198
+				line_style 	0)))
+		    (object AssociationViewNew "$UNNAMED$64" @211
+			location   	(1691, 1900)
+			stereotype 	TRUE
+			icon_style 	"Icon"
+			quidu      	"517B5041039F"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$65" @212
+				Parent_View 	@211
+				location   	(782, 597)
+				stereotype 	TRUE
+				icon_style 	"Icon"
+				quidu      	"517B50430135"
+				client     	@211
+				supplier   	@200
+				line_style 	0)
+			    (object RoleView "$UNNAMED$66" @213
+				Parent_View 	@211
+				location   	(782, 597)
+				stereotype 	TRUE
+				icon_style 	"Icon"
+				quidu      	"517B5043013A"
+				client     	@211
+				supplier   	@204
+				line_style 	0)))
+		    (object CategoryView "Logical View::Boundaries" @214
+			location   	(2614, 804)
+			label      	(object ItemLabel
+			    Parent_View 	@214
+			    location   	(2470, 720)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    nlines     	2
+			    max_width  	288
+			    justify    	0
+			    label      	"Boundaries")
+			stereotype 	TRUE
+			icon_style 	"Icon"
+			quidu      	"5174340E023D"
+			width      	300
+			height     	180)
+		    (object CategoryView "Logical View::Users" @215
+			location   	(2614, 192)
+			label      	(object ItemLabel
+			    Parent_View 	@215
+			    location   	(2470, 108)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    nlines     	2
+			    max_width  	288
+			    justify    	0
+			    label      	"Users")
+			stereotype 	TRUE
+			icon_style 	"Icon"
+			quidu      	"517754A30027"
+			width      	300
+			height     	180)
+		    (object ImportView "" @216
+			stereotype 	TRUE
+			icon_style 	"Icon"
+			quidu      	"517B509D01D6"
+			client     	@215
+			supplier   	@214
+			line_style 	0)
+		    (object CategoryView "Logical View::Entities" @217
+			location   	(2614, 1522)
+			label      	(object ItemLabel
+			    Parent_View 	@217
+			    location   	(2470, 1438)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    nlines     	2
+			    max_width  	288
+			    justify    	0
+			    label      	"Entities")
+			stereotype 	TRUE
+			icon_style 	"Icon"
+			quidu      	"517433F802B5"
+			width      	300
+			height     	180)
+		    (object ImportView "" @218
+			stereotype 	TRUE
+			icon_style 	"Icon"
+			quidu      	"517B50AD0246"
+			client     	@214
+			supplier   	@217
+			line_style 	0)))))
+    root_subsystem 	(object SubSystem "Component View"
+	quid       	"513E8E320300"
+	physical_models 	(list unit_reference_list)
+	physical_presentations 	(list unit_reference_list
+	    (object Module_Diagram "Main"
+		quid       	"513E8E3203A9"
+		title      	"Main"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list))))
+    process_structure 	(object Processes
+	quid       	"513E8E320301"
+	ProcsNDevs 	(list
+	    (object Process_Diagram "Deployment View"
+		quid       	"513E8E320303"
+		title      	"Deployment View"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list))))
+    properties 	(object Properties
+	quid       	"513E8E320302"))
