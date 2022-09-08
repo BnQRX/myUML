@@ -1,0 +1,2920 @@
+
+(object Petal
+    version    	42
+    _written   	"Rose 4.7349.B"
+    charSet    	204)
+
+(object Design "Logical View"
+    is_unit    	TRUE
+    is_loaded  	TRUE
+    defaults   	(object defaults
+	rightMargin 	0.000000
+	leftMargin 	0.000000
+	topMargin  	0.000000
+	bottomMargin 	0.000000
+	pageOverlap 	0.000000
+	clipIconLabels 	TRUE
+	autoResize 	TRUE
+	snapToGrid 	FALSE
+	gridX      	3
+	gridY      	3
+	defaultFont 	(object Font
+	    size       	12
+	    face       	"Arial"
+	    charSet    	204
+	    bold       	FALSE
+	    italics    	FALSE
+	    underline  	FALSE
+	    strike     	FALSE
+	    color      	0
+	    default_color 	TRUE)
+	showMessageNum 	3
+	showClassOfObject 	TRUE
+	notation   	"Unified")
+    root_usecase_package 	(object Class_Category "Use Case View"
+	quid       	"513ED32A0282"
+	exportControl 	"Public"
+	global     	TRUE
+	logical_models 	(list unit_reference_list
+	    (object Class "Пользователь"
+		quid       	"513ED522030F"
+		stereotype 	"Actor")
+	    (object Class "Форма редактирования"
+		quid       	"515E86190067"
+		stereotype 	"Interface")
+	    (object Class "Форма поиска"
+		quid       	"515E875502DC"
+		stereotype 	"Interface")
+	    (object Class "Окно параметров"
+		quid       	"515F1FB00158"
+		stereotype 	"Interface")
+	    (object Class "окно управления отчетов"
+		quid       	"515F1FCD0314"
+		stereotype 	"Interface")
+	    (object Class "Окно просмотра"
+		quid       	"515F20610126"
+		stereotype 	"Interface")
+	    (object Class "Окно отчета"
+		quid       	"515F21790396"
+		stereotype 	"Interface")
+	    (object UseCase "Распечатать карточку"
+		quid       	"513ED33501A8")
+	    (object UseCase "Удалить карточки"
+		quid       	"513ED339028C")
+	    (object UseCase "Изменить карточки"
+		quid       	"513ED3A50158")
+	    (object UseCase "Управлять карточками"
+		quid       	"513ED5D30350")
+	    (object UseCase "Выбрать карточку"
+		quid       	"513FADAB0233")
+	    (object UseCase "Выбрать из списка"
+		quid       	"513FAE67019A")
+	    (object UseCase "Найти карточку"
+		quid       	"513FAE7102C2")
+	    (object UseCase "Посмотреть карточку"
+		quid       	"513FAF5B00C5")
+	    (object UseCase "Создать карточку"
+		quid       	"515E83C7031B")
+	    (object UseCase "Добавить в список"
+		quid       	"515E83FF0336")
+	    (object UseCase "Создать отчет"
+		quid       	"515E878B0074")
+	    (object UseCase "Ввбрать вид отчета"
+		quid       	"515F1DB40115")
+	    (object UseCase "Выбрать объект отчета"
+		quid       	"515F1DC00046")
+	    (object UseCase "Задать параметры отчета"
+		quid       	"515F1DDE0128")
+	    (object UseCase "Сформировать отчет"
+		quid       	"515F1E190327")
+	    (object Association "$UNNAMED$0"
+		quid       	"513FADB800EA"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$1"
+			quid       	"513FADB8035B"
+			supplier   	"Use Case View::Выбрать карточку"
+			quidu      	"513FADAB0233"
+			client_cardinality 	(value cardinality "1..n")
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$2"
+			quid       	"513FADB8035C"
+			supplier   	"Use Case View::Пользователь"
+			quidu      	"513ED522030F"
+			client_cardinality 	(value cardinality "n"))))
+	    (object Association "$UNNAMED$3"
+		quid       	"513FAF6601A0"
+		stereotype 	"include"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$4"
+			quid       	"513FAF670077"
+			supplier   	"Use Case View::Посмотреть карточку"
+			quidu      	"513FAF5B00C5"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$5"
+			quid       	"513FAF670078"
+			supplier   	"Use Case View::Выбрать карточку"
+			quidu      	"513FADAB0233")))
+	    (object Association "$UNNAMED$6"
+		quid       	"515E83470114"
+		stereotype 	"extend"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$7"
+			quid       	"515E83470334"
+			supplier   	"Use Case View::Выбрать карточку"
+			quidu      	"513FADAB0233"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$8"
+			quid       	"515E83470335"
+			supplier   	"Use Case View::Выбрать из списка"
+			quidu      	"513FAE67019A")))
+	    (object Association "$UNNAMED$9"
+		quid       	"515E8349035C"
+		stereotype 	"extend"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$10"
+			quid       	"515E834A02D7"
+			supplier   	"Use Case View::Выбрать карточку"
+			quidu      	"513FADAB0233"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$11"
+			quid       	"515E834A02D8"
+			supplier   	"Use Case View::Найти карточку"
+			quidu      	"513FAE7102C2")))
+	    (object Association "$UNNAMED$12"
+		quid       	"515E835000C4"
+		stereotype 	"include"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$13"
+			quid       	"515E835003C4"
+			supplier   	"Use Case View::Управлять карточками"
+			quidu      	"513ED5D30350"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$14"
+			quid       	"515E835003C5"
+			supplier   	"Use Case View::Выбрать карточку"
+			quidu      	"513FADAB0233")))
+	    (object Association "$UNNAMED$15"
+		quid       	"515E8356014C"
+		stereotype 	"extend"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$16"
+			quid       	"515E83570039"
+			supplier   	"Use Case View::Управлять карточками"
+			quidu      	"513ED5D30350"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$17"
+			quid       	"515E8357003A"
+			supplier   	"Use Case View::Распечатать карточку"
+			quidu      	"513ED33501A8")))
+	    (object Association "$UNNAMED$18"
+		quid       	"515E83590107"
+		stereotype 	"extend"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$19"
+			quid       	"515E8359032C"
+			supplier   	"Use Case View::Управлять карточками"
+			quidu      	"513ED5D30350"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$20"
+			quid       	"515E8359032D"
+			supplier   	"Use Case View::Удалить карточки"
+			quidu      	"513ED339028C")))
+	    (object Association "$UNNAMED$21"
+		quid       	"515E835B03C5"
+		stereotype 	"extend"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$22"
+			quid       	"515E835C032C"
+			supplier   	"Use Case View::Управлять карточками"
+			quidu      	"513ED5D30350"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$23"
+			quid       	"515E835C032D"
+			supplier   	"Use Case View::Изменить карточки"
+			quidu      	"513ED3A50158")))
+	    (object Association "$UNNAMED$24"
+		quid       	"515E83D5029D"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$25"
+			quid       	"515E83D60084"
+			supplier   	"Use Case View::Создать карточку"
+			quidu      	"515E83C7031B"
+			client_cardinality 	(value cardinality "1..n")
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$26"
+			quid       	"515E83D60085"
+			supplier   	"Use Case View::Пользователь"
+			quidu      	"513ED522030F")))
+	    (object Association "$UNNAMED$27"
+		quid       	"515E840D030B"
+		stereotype 	"include"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$28"
+			quid       	"515E840E020B"
+			supplier   	"Use Case View::Добавить в список"
+			quidu      	"515E83FF0336"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$29"
+			quid       	"515E840E020C"
+			supplier   	"Use Case View::Создать карточку"
+			quidu      	"515E83C7031B")))
+	    (object Association "$UNNAMED$30"
+		quid       	"515E861C0386"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$31"
+			quid       	"515E861D0200"
+			supplier   	"Use Case View::Форма редактирования"
+			quidu      	"515E86190067"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$32"
+			quid       	"515E861D0202"
+			supplier   	"Use Case View::Распечатать карточку"
+			quidu      	"513ED33501A8")))
+	    (object Association "$UNNAMED$33"
+		quid       	"515E861F021A"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$34"
+			quid       	"515E86200020"
+			supplier   	"Use Case View::Форма редактирования"
+			quidu      	"515E86190067"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$35"
+			quid       	"515E86200022"
+			supplier   	"Use Case View::Удалить карточки"
+			quidu      	"513ED339028C")))
+	    (object Association "$UNNAMED$36"
+		quid       	"515E86210358"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$37"
+			quid       	"515E86220228"
+			supplier   	"Use Case View::Форма редактирования"
+			quidu      	"515E86190067"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$38"
+			quid       	"515E86220229"
+			supplier   	"Use Case View::Изменить карточки"
+			quidu      	"513ED3A50158")))
+	    (object Association "$UNNAMED$39"
+		quid       	"515E8769017D"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$40"
+			quid       	"515E876A0145"
+			supplier   	"Use Case View::Форма поиска"
+			quidu      	"515E875502DC"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$41"
+			quid       	"515E876A0148"
+			supplier   	"Use Case View::Найти карточку"
+			quidu      	"513FAE7102C2")))
+	    (object Association "$UNNAMED$42"
+		quid       	"515F2072024C"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$43"
+			quid       	"515F207301A0"
+			supplier   	"Use Case View::Окно просмотра"
+			quidu      	"515F20610126"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$44"
+			quid       	"515F207301A1"
+			supplier   	"Use Case View::Посмотреть карточку"
+			quidu      	"513FAF5B00C5")))
+	    (object Association "$UNNAMED$45"
+		quid       	"515F215D03CA"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$46"
+			quid       	"515F215E0272"
+			supplier   	"Use Case View::Создать отчет"
+			quidu      	"515E878B0074"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$47"
+			quid       	"515F215E0273"
+			supplier   	"Use Case View::Пользователь"
+			quidu      	"513ED522030F")))
+	    (object Association "$UNNAMED$48"
+		quid       	"515F216402BB"
+		stereotype 	"include"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$49"
+			quid       	"515F21650115"
+			supplier   	"Use Case View::Выбрать объект отчета"
+			quidu      	"515F1DC00046"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$50"
+			quid       	"515F21650116"
+			supplier   	"Use Case View::Создать отчет"
+			quidu      	"515E878B0074")))
+	    (object Association "$UNNAMED$51"
+		quid       	"515F2166023D"
+		stereotype 	"include"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$52"
+			quid       	"515F216700A6"
+			supplier   	"Use Case View::Ввбрать вид отчета"
+			quidu      	"515F1DB40115"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$53"
+			quid       	"515F216700A7"
+			supplier   	"Use Case View::Создать отчет"
+			quidu      	"515E878B0074")))
+	    (object Association "$UNNAMED$54"
+		quid       	"515F21690373"
+		stereotype 	"include"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$55"
+			quid       	"515F216A01FC"
+			supplier   	"Use Case View::Сформировать отчет"
+			quidu      	"515F1E190327"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$56"
+			quid       	"515F216A01FD"
+			supplier   	"Use Case View::Создать отчет"
+			quidu      	"515E878B0074")))
+	    (object Association "$UNNAMED$57"
+		quid       	"515F216B03DF"
+		stereotype 	"include"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$58"
+			quid       	"515F216C02C5"
+			supplier   	"Use Case View::Задать параметры отчета"
+			quidu      	"515F1DDE0128"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$59"
+			quid       	"515F216C02C6"
+			supplier   	"Use Case View::Создать отчет"
+			quidu      	"515E878B0074")))
+	    (object Association "$UNNAMED$60"
+		quid       	"515F218F0116"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$61"
+			quid       	"515F2190000C"
+			supplier   	"Use Case View::Окно отчета"
+			quidu      	"515F21790396"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$62"
+			quid       	"515F2190000D"
+			supplier   	"Use Case View::Сформировать отчет"
+			quidu      	"515F1E190327")))
+	    (object Association "$UNNAMED$63"
+		quid       	"515F219103B4"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$64"
+			quid       	"515F219201DF"
+			supplier   	"Use Case View::Окно отчета"
+			quidu      	"515F21790396"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$65"
+			quid       	"515F219201E0"
+			supplier   	"Use Case View::Выбрать объект отчета"
+			quidu      	"515F1DC00046")))
+	    (object Association "$UNNAMED$66"
+		quid       	"515F21960297"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$67"
+			quid       	"515F219701AC"
+			supplier   	"Use Case View::Окно отчета"
+			quidu      	"515F21790396"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$68"
+			quid       	"515F219701AD"
+			supplier   	"Use Case View::Задать параметры отчета"
+			quidu      	"515F1DDE0128")))
+	    (object Association "$UNNAMED$69"
+		quid       	"515F21990063"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$70"
+			quid       	"515F219903BE"
+			supplier   	"Use Case View::Окно отчета"
+			quidu      	"515F21790396"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$71"
+			quid       	"515F219903BF"
+			supplier   	"Use Case View::Ввбрать вид отчета"
+			quidu      	"515F1DB40115")))
+	    (object Mechanism @1
+		logical_models 	(list unit_reference_list
+		    (object Object "$UNNAMED$72"
+			quid       	"5168F2940294"
+			collaborators 	(list link_list
+			    (object Link
+				quid       	"5168F8D203BC"
+				supplier   	"Form for work with report"
+				quidu      	"5168F2E700BC"
+				messages   	(list Messages
+				    (object Message "Begin_to_work( )"
+					quid       	"5168F8D203BD"
+					frequency  	"Aperiodic"
+					synchronization 	"Simple"
+					dir        	"FromClientToSupplier"
+					sequence   	""
+					ordinal    	0
+					quidu      	"5177569801B9")
+				    (object Message "To_select_kind_of_reports()"
+					quid       	"5169CBBC00AA"
+					frequency  	"Aperiodic"
+					synchronization 	"Simple"
+					dir        	"FromClientToSupplier"
+					sequence   	""
+					ordinal    	3
+					quidu      	"5177569E0029")
+				    (object Message "To_select_cards()"
+					quid       	"5169CD410210"
+					frequency  	"Aperiodic"
+					synchronization 	"Simple"
+					dir        	"FromClientToSupplier"
+					sequence   	""
+					ordinal    	7
+					quidu      	"517756AB0140")
+				    (object Message "To_generatea_report()"
+					quid       	"5169CE0402AC"
+					frequency  	"Aperiodic"
+					synchronization 	"Simple"
+					dir        	"FromClientToSupplier"
+					sequence   	""
+					ordinal    	11
+					quidu      	"517756C000B0"))))
+			class      	"Logical View::Users::User"
+			quidu      	"51775640023C"
+			persistence 	"Transient"
+			multi      	FALSE)
+		    (object Object "Form for work with report"
+			quid       	"5168F2E700BC"
+			collaborators 	(list link_list
+			    (object Link
+				quid       	"5168F90301FE"
+				supplier   	"Form for work with report"
+				quidu      	"5168F2E700BC")
+			    (object Link
+				quid       	"5168F92C01B3"
+				supplier   	"List of cards"
+				quidu      	"5168F778026C"
+				messages   	(list Messages
+				    (object Message "To_show_list_of_cards( )"
+					quid       	"5168F92C01B4"
+					frequency  	"Aperiodic"
+					synchronization 	"Timeout"
+					dir        	"FromClientToSupplier"
+					sequence   	""
+					ordinal    	4
+					quidu      	"517757290360")))
+			    (object Link
+				quid       	"5168F9D80351"
+				supplier   	"Form for work with report"
+				quidu      	"5168F2E700BC")
+			    (object Link
+				quid       	"5169C53A01C8"
+				supplier   	"Report"
+				quidu      	"5169C1A3002B"
+				messages   	(list Messages
+				    (object Message "To_add_cards_to_report(Integer)"
+					quid       	"5169C53A01C9"
+					frequency  	"Aperiodic"
+					synchronization 	"Timeout"
+					dir        	"FromClientToSupplier"
+					sequence   	""
+					ordinal    	8
+					quidu      	"5177575900A7")
+				    (object Message "To_show_cards_in_report()"
+					quid       	"5169C5A40151"
+					frequency  	"Aperiodic"
+					synchronization 	"Asynchronous"
+					dir        	"ToClientFromSupplier"
+					sequence   	""
+					ordinal    	10
+					quidu      	"5177576F03BD")
+				    (object Message "To_create_report( )"
+					quid       	"5169D2150228"
+					frequency  	"Aperiodic"
+					synchronization 	"Timeout"
+					dir        	"FromClientToSupplier"
+					sequence   	""
+					ordinal    	12
+					quidu      	"5177578102E8")
+				    (object Message "To_make_report()"
+					quid       	"5169D22403A4"
+					frequency  	"Aperiodic"
+					synchronization 	"Asynchronous"
+					dir        	"ToClientFromSupplier"
+					sequence   	""
+					ordinal    	13
+					quidu      	"5177578F0008")))
+			    (object Link
+				quid       	"5169CB290162"
+				supplier   	"List of reports"
+				quidu      	"5169CAC900BD"
+				messages   	(list Messages
+				    (object Message "Show_list_of_reports()"
+					quid       	"5169CB290163"
+					frequency  	"Aperiodic"
+					synchronization 	"Timeout"
+					dir        	"FromClientToSupplier"
+					sequence   	""
+					ordinal    	1
+					quidu      	"517756D50298")
+				    (object Message "Show_kind_of_reports()"
+					quid       	"5169CB53027C"
+					frequency  	"Aperiodic"
+					synchronization 	"Asynchronous"
+					dir        	"ToClientFromSupplier"
+					sequence   	""
+					ordinal    	2
+					quidu      	"5177570C0127"))))
+			class      	"Logical View::Boundaries::Form for work with report"
+			quidu      	"517756140101"
+			persistence 	"Transient"
+			multi      	FALSE)
+		    (object Object "List of cards"
+			quid       	"5168F778026C"
+			collaborators 	(list link_list
+			    (object Link
+				quid       	"5168F9400164"
+				supplier   	"List of cards"
+				quidu      	"5168F778026C")
+			    (object Link
+				quid       	"5169C4B10263"
+				supplier   	"Card"
+				quidu      	"5168F9C602E9"
+				messages   	(list Messages
+				    (object Message "To_show_card( )"
+					quid       	"5169D2570280"
+					frequency  	"Aperiodic"
+					synchronization 	"Timeout"
+					dir        	"FromClientToSupplier"
+					sequence   	""
+					ordinal    	5
+					quidu      	"5177573E002F"))))
+			class      	"Logical View::Entities::List of cards"
+			quidu      	"5177562F017A"
+			persistence 	"Transient"
+			multi      	FALSE)
+		    (object Object "Card"
+			quid       	"5168F9C602E9"
+			collaborators 	(list link_list
+			    (object Link
+				quid       	"5171830B0285"
+				supplier   	"Card"
+				quidu      	"5168F9C602E9")
+			    (object Link
+				quid       	"5174319101C5"
+				supplier   	"Form for work with report"
+				quidu      	"5168F2E700BC"
+				messages   	(list Messages
+				    (object Message "To_show_cards()"
+					quid       	"5174319101C6"
+					frequency  	"Aperiodic"
+					synchronization 	"Asynchronous"
+					dir        	"FromClientToSupplier"
+					sequence   	""
+					ordinal    	6
+					quidu      	"517757480119"))))
+			class      	"Logical View::Entities::Card"
+			quidu      	"517756350272"
+			persistence 	"Transient"
+			multi      	FALSE)
+		    (object Object "Report"
+			quid       	"5169C1A3002B"
+			collaborators 	(list link_list
+			    (object Link
+				quid       	"5169C629022D"
+				supplier   	"Report"
+				quidu      	"5169C1A3002B"
+				messages   	(list Messages
+				    (object Message "To_complete_report()"
+					quid       	"5169C629022E"
+					frequency  	"Aperiodic"
+					synchronization 	"Simple"
+					dir        	"FromClientToSupplier"
+					sequence   	""
+					ordinal    	9
+					Operation  	"To_complete_report( )"
+					quidu      	"5177576501CA"))))
+			class      	"Logical View::Entities::Report"
+			quidu      	"5177563B0353"
+			persistence 	"Transient"
+			multi      	FALSE)
+		    (object Object "List of reports"
+			quid       	"5169CAC900BD"
+			class      	"Logical View::Entities::List of reports"
+			quidu      	"5177562703DB"
+			persistence 	"Transient"
+			multi      	FALSE))))
+	logical_presentations 	(list unit_reference_list
+	    (object UseCaseDiagram "Main"
+		quid       	"513ED32A0299"
+		title      	"Main"
+		zoom       	89
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list
+		    (object ClassView "Class" "Use Case View::Форма редактирования" @2
+			ShowCompartmentStereotypes 	TRUE
+			IncludeAttribute 	TRUE
+			IncludeOperation 	TRUE
+			location   	(2964, 923)
+			label      	(object ItemLabel
+			    Parent_View 	@2
+			    location   	(2963, 1031)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	229
+			    justify    	0
+			    label      	"Форма редактирования")
+			stereotype 	FALSE
+			icon       	"Interface"
+			icon_style 	"Icon"
+			quidu      	"515E86190067"
+			width      	58
+			height     	58
+			annotation 	8
+			autoResize 	TRUE)
+		    (object UseCaseView "Use Case View::Распечатать карточку" @3
+			location   	(2370, 487)
+			label      	(object ItemLabel
+			    Parent_View 	@3
+			    location   	(2370, 625)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	631
+			    justify    	0
+			    label      	"Распечатать карточку")
+			stereotype 	TRUE
+			icon_style 	"Icon"
+			quidu      	"513ED33501A8"
+			height     	118
+			autoResize 	TRUE)
+		    (object AssociationViewNew "$UNNAMED$30" @4
+			location   	(2765, 776)
+			stereotype 	TRUE
+			icon_style 	"Icon"
+			quidu      	"515E861C0386"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$31" @5
+				Parent_View 	@4
+				location   	(395, 289)
+				stereotype 	TRUE
+				icon_style 	"Icon"
+				quidu      	"515E861D0200"
+				client     	@4
+				supplier   	@2
+				line_style 	0)
+			    (object RoleView "$UNNAMED$32" @6
+				Parent_View 	@4
+				location   	(395, 289)
+				stereotype 	TRUE
+				icon_style 	"Icon"
+				quidu      	"515E861D0202"
+				client     	@4
+				supplier   	@3
+				line_style 	0)))
+		    (object UseCaseView "Use Case View::Удалить карточки" @7
+			location   	(2349, 865)
+			label      	(object ItemLabel
+			    Parent_View 	@7
+			    location   	(2349, 1003)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	631
+			    justify    	0
+			    label      	"Удалить карточки")
+			stereotype 	TRUE
+			icon_style 	"Icon"
+			quidu      	"513ED339028C"
+			height     	118
+			autoResize 	TRUE)
+		    (object AssociationViewNew "$UNNAMED$33" @8
+			location   	(2696, 895)
+			stereotype 	TRUE
+			icon_style 	"Icon"
+			quidu      	"515E861F021A"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$34" @9
+				Parent_View 	@8
+				location   	(315, -17)
+				stereotype 	TRUE
+				icon_style 	"Icon"
+				quidu      	"515E86200020"
+				client     	@8
+				supplier   	@2
+				line_style 	0)
+			    (object RoleView "$UNNAMED$35" @10
+				Parent_View 	@8
+				location   	(315, -17)
+				stereotype 	TRUE
+				icon_style 	"Icon"
+				quidu      	"515E86200022"
+				client     	@8
+				supplier   	@7
+				line_style 	0)))
+		    (object UseCaseView "Use Case View::Изменить карточки" @11
+			location   	(2301, 1308)
+			label      	(object ItemLabel
+			    Parent_View 	@11
+			    location   	(2301, 1446)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	631
+			    justify    	0
+			    label      	"Изменить карточки")
+			stereotype 	TRUE
+			icon_style 	"Icon"
+			quidu      	"513ED3A50158"
+			height     	118
+			autoResize 	TRUE)
+		    (object AssociationViewNew "$UNNAMED$36" @12
+			location   	(2581, 1142)
+			stereotype 	TRUE
+			icon_style 	"Icon"
+			quidu      	"515E86210358"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$37" @13
+				Parent_View 	@12
+				location   	(288, -157)
+				stereotype 	TRUE
+				icon_style 	"Icon"
+				quidu      	"515E86220228"
+				client     	@12
+				supplier   	@2
+				line_style 	0)
+			    (object RoleView "$UNNAMED$38" @14
+				Parent_View 	@12
+				location   	(288, -157)
+				stereotype 	TRUE
+				icon_style 	"Icon"
+				quidu      	"515E86220229"
+				client     	@12
+				supplier   	@11
+				line_style 	0)))
+		    (object ClassView "Class" "Use Case View::Форма поиска" @15
+			ShowCompartmentStereotypes 	TRUE
+			IncludeAttribute 	TRUE
+			IncludeOperation 	TRUE
+			location   	(1748, 1356)
+			label      	(object ItemLabel
+			    Parent_View 	@15
+			    location   	(1747, 1464)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	229
+			    justify    	0
+			    label      	"Форма поиска")
+			stereotype 	FALSE
+			icon       	"Interface"
+			icon_style 	"Icon"
+			quidu      	"515E875502DC"
+			width      	58
+			height     	58
+			annotation 	8
+			autoResize 	TRUE)
+		    (object ClassView "Class" "Use Case View::Окно просмотра" @16
+			ShowCompartmentStereotypes 	TRUE
+			IncludeAttribute 	TRUE
+			IncludeOperation 	TRUE
+			location   	(1800, 362)
+			label      	(object ItemLabel
+			    Parent_View 	@16
+			    location   	(1799, 470)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	229
+			    justify    	0
+			    label      	"Окно просмотра")
+			stereotype 	FALSE
+			icon       	"Interface"
+			icon_style 	"Icon"
+			quidu      	"515F20610126"
+			width      	58
+			height     	58
+			annotation 	8
+			autoResize 	TRUE)
+		    (object UseCaseView "Use Case View::Выбрать из списка" @17
+			location   	(690, 284)
+			label      	(object ItemLabel
+			    Parent_View 	@17
+			    location   	(690, 422)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	631
+			    justify    	0
+			    label      	"Выбрать из списка")
+			stereotype 	TRUE
+			icon_style 	"Icon"
+			quidu      	"513FAE67019A"
+			height     	118
+			autoResize 	TRUE)
+		    (object UseCaseView "Use Case View::Управлять карточками" @18
+			location   	(1531, 821)
+			label      	(object ItemLabel
+			    Parent_View 	@18
+			    location   	(1531, 959)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	631
+			    justify    	0
+			    label      	"Управлять карточками")
+			stereotype 	TRUE
+			icon_style 	"Icon"
+			quidu      	"513ED5D30350"
+			height     	118
+			autoResize 	TRUE)
+		    (object AssociationViewNew "$UNNAMED$15" @19
+			location   	(1877, 680)
+			stereotype 	(object SegLabel @20
+			    Parent_View 	@19
+			    location   	(1847, 679)
+			    font       	(object Font
+				size       	10
+				charSet    	204)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    anchor     	10
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	450
+			    justify    	0
+			    label      	"<<extend>>"
+			    pctDist    	0.000000
+			    height     	2
+			    orientation 	0)
+			icon_style 	"Icon"
+			quidu      	"515E8356014C"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$16" @21
+				Parent_View 	@19
+				location   	(-237, 134)
+				stereotype 	TRUE
+				icon_style 	"Icon"
+				quidu      	"515E83570039"
+				client     	@19
+				supplier   	@18
+				line_style 	0)
+			    (object RoleView "$UNNAMED$17" @22
+				Parent_View 	@19
+				location   	(-237, 134)
+				stereotype 	TRUE
+				icon_style 	"Icon"
+				quidu      	"515E8357003A"
+				client     	@19
+				supplier   	@3
+				line_style 	0)))
+		    (object AssociationViewNew "$UNNAMED$18" @23
+			location   	(1938, 839)
+			stereotype 	(object SegLabel @24
+			    Parent_View 	@23
+			    location   	(1908, 839)
+			    font       	(object Font
+				size       	10
+				charSet    	204)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    anchor     	10
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	450
+			    justify    	0
+			    label      	"<<extend>>"
+			    pctDist    	0.000000
+			    height     	0
+			    orientation 	1)
+			icon_style 	"Icon"
+			quidu      	"515E83590107"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$19" @25
+				Parent_View 	@23
+				location   	(-364, -64)
+				stereotype 	TRUE
+				icon_style 	"Icon"
+				quidu      	"515E8359032C"
+				client     	@23
+				supplier   	@18
+				line_style 	0)
+			    (object RoleView "$UNNAMED$20" @26
+				Parent_View 	@23
+				location   	(-364, -64)
+				stereotype 	TRUE
+				icon_style 	"Icon"
+				quidu      	"515E8359032D"
+				client     	@23
+				supplier   	@7
+				line_style 	0)))
+		    (object AssociationViewNew "$UNNAMED$21" @27
+			location   	(1990, 1111)
+			stereotype 	(object SegLabel @28
+			    Parent_View 	@27
+			    location   	(1960, 1130)
+			    font       	(object Font
+				size       	10
+				charSet    	204)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    anchor     	10
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	450
+			    justify    	0
+			    label      	"<<extend>>"
+			    pctDist    	0.000000
+			    height     	19
+			    orientation 	1)
+			icon_style 	"Icon"
+			quidu      	"515E835B03C5"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$22" @29
+				Parent_View 	@27
+				location   	(-278, -101)
+				stereotype 	TRUE
+				icon_style 	"Icon"
+				quidu      	"515E835C032C"
+				client     	@27
+				supplier   	@18
+				line_style 	0)
+			    (object RoleView "$UNNAMED$23" @30
+				Parent_View 	@27
+				location   	(-278, -101)
+				stereotype 	TRUE
+				icon_style 	"Icon"
+				quidu      	"515E835C032D"
+				client     	@27
+				supplier   	@11
+				line_style 	0)))
+		    (object UseCaseView "Use Case View::Найти карточку" @31
+			location   	(1378, 1224)
+			label      	(object ItemLabel
+			    Parent_View 	@31
+			    location   	(1378, 1362)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	631
+			    justify    	0
+			    label      	"Найти карточку")
+			stereotype 	TRUE
+			icon_style 	"Icon"
+			quidu      	"513FAE7102C2"
+			height     	118
+			autoResize 	TRUE)
+		    (object AssociationViewNew "$UNNAMED$39" @32
+			location   	(1637, 1314)
+			stereotype 	TRUE
+			icon_style 	"Icon"
+			quidu      	"515E8769017D"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$40" @33
+				Parent_View 	@32
+				location   	(259, 90)
+				stereotype 	TRUE
+				icon_style 	"Icon"
+				quidu      	"515E876A0145"
+				client     	@32
+				supplier   	@15
+				line_style 	0)
+			    (object RoleView "$UNNAMED$41" @34
+				Parent_View 	@32
+				location   	(259, 90)
+				stereotype 	TRUE
+				icon_style 	"Icon"
+				quidu      	"515E876A0148"
+				client     	@32
+				supplier   	@31
+				line_style 	0)))
+		    (object UseCaseView "Use Case View::Посмотреть карточку" @35
+			location   	(1306, 434)
+			label      	(object ItemLabel
+			    Parent_View 	@35
+			    location   	(1306, 572)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	631
+			    justify    	0
+			    label      	"Посмотреть карточку")
+			stereotype 	TRUE
+			icon_style 	"Icon"
+			quidu      	"513FAF5B00C5"
+			height     	118
+			autoResize 	TRUE)
+		    (object AssociationViewNew "$UNNAMED$42" @36
+			location   	(1593, 389)
+			stereotype 	TRUE
+			icon_style 	"Icon"
+			quidu      	"515F2072024C"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$43" @37
+				Parent_View 	@36
+				location   	(287, -45)
+				stereotype 	TRUE
+				icon_style 	"Icon"
+				quidu      	"515F207301A0"
+				client     	@36
+				supplier   	@16
+				line_style 	0)
+			    (object RoleView "$UNNAMED$44" @38
+				Parent_View 	@36
+				location   	(287, -45)
+				stereotype 	TRUE
+				icon_style 	"Icon"
+				quidu      	"515F207301A1"
+				client     	@36
+				supplier   	@35
+				line_style 	0)))
+		    (object UseCaseView "Use Case View::Добавить в список" @39
+			location   	(1412, 1615)
+			label      	(object ItemLabel
+			    Parent_View 	@39
+			    location   	(1412, 1753)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	631
+			    justify    	0
+			    label      	"Добавить в список")
+			stereotype 	TRUE
+			icon_style 	"Icon"
+			quidu      	"515E83FF0336"
+			autoResize 	TRUE)
+		    (object UseCaseView "Use Case View::Выбрать карточку" @40
+			location   	(693, 812)
+			label      	(object ItemLabel
+			    Parent_View 	@40
+			    location   	(693, 950)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	631
+			    justify    	0
+			    label      	"Выбрать карточку")
+			stereotype 	TRUE
+			icon_style 	"Icon"
+			quidu      	"513FADAB0233"
+			height     	118
+			autoResize 	TRUE)
+		    (object AssociationViewNew "$UNNAMED$6" @41
+			location   	(689, 601)
+			stereotype 	(object SegLabel @42
+			    Parent_View 	@41
+			    location   	(659, 567)
+			    font       	(object Font
+				size       	10
+				charSet    	204)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    anchor     	10
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	450
+			    justify    	0
+			    label      	"<<extend>>"
+			    pctDist    	0.000000
+			    height     	35
+			    orientation 	0)
+			icon_style 	"Icon"
+			quidu      	"515E83470114"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$7" @43
+				Parent_View 	@41
+				location   	(36, 183)
+				stereotype 	TRUE
+				icon_style 	"Icon"
+				quidu      	"515E83470334"
+				client     	@41
+				supplier   	@40
+				line_style 	0)
+			    (object RoleView "$UNNAMED$8" @44
+				Parent_View 	@41
+				location   	(36, 183)
+				stereotype 	TRUE
+				icon_style 	"Icon"
+				quidu      	"515E83470335"
+				client     	@41
+				supplier   	@17
+				line_style 	0)))
+		    (object AssociationViewNew "$UNNAMED$12" @45
+			location   	(1111, 814)
+			stereotype 	(object SegLabel @46
+			    Parent_View 	@45
+			    location   	(1081, 820)
+			    font       	(object Font
+				size       	10
+				charSet    	204)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    anchor     	10
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	450
+			    justify    	0
+			    label      	"<<include>>"
+			    pctDist    	0.000000
+			    height     	6
+			    orientation 	1)
+			icon_style 	"Icon"
+			quidu      	"515E835000C4"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$13" @47
+				Parent_View 	@45
+				location   	(408, -14)
+				stereotype 	TRUE
+				icon_style 	"Icon"
+				quidu      	"515E835003C4"
+				client     	@45
+				supplier   	@18
+				line_style 	0)
+			    (object RoleView "$UNNAMED$14" @48
+				Parent_View 	@45
+				location   	(408, -14)
+				stereotype 	TRUE
+				icon_style 	"Icon"
+				quidu      	"515E835003C5"
+				client     	@45
+				supplier   	@40
+				line_style 	0)))
+		    (object AssociationViewNew "$UNNAMED$9" @49
+			location   	(1093, 1051)
+			stereotype 	(object SegLabel @50
+			    Parent_View 	@49
+			    location   	(1081, 1047)
+			    font       	(object Font
+				size       	10
+				charSet    	204)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    anchor     	10
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	450
+			    justify    	0
+			    label      	"<<extend>>"
+			    pctDist    	0.000000
+			    height     	5
+			    orientation 	0)
+			icon_style 	"Icon"
+			quidu      	"515E8349035C"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$10" @51
+				Parent_View 	@49
+				location   	(-9, -489)
+				stereotype 	TRUE
+				icon_style 	"Icon"
+				quidu      	"515E834A02D7"
+				client     	@49
+				supplier   	@40
+				line_style 	0)
+			    (object RoleView "$UNNAMED$11" @52
+				Parent_View 	@49
+				location   	(-9, -489)
+				stereotype 	TRUE
+				icon_style 	"Icon"
+				quidu      	"515E834A02D8"
+				client     	@49
+				supplier   	@31
+				line_style 	0)))
+		    (object AssociationViewNew "$UNNAMED$3" @53
+			location   	(920, 669)
+			stereotype 	(object SegLabel @54
+			    Parent_View 	@53
+			    location   	(890, 675)
+			    font       	(object Font
+				size       	10
+				charSet    	204)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    anchor     	10
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	450
+			    justify    	0
+			    label      	"<<include>>"
+			    pctDist    	0.000000
+			    height     	6
+			    orientation 	1)
+			icon_style 	"Icon"
+			quidu      	"513FAF6601A0"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$4" @55
+				Parent_View 	@53
+				location   	(217, -559)
+				stereotype 	TRUE
+				icon_style 	"Icon"
+				quidu      	"513FAF670077"
+				client     	@53
+				supplier   	@35
+				line_style 	0)
+			    (object RoleView "$UNNAMED$5" @56
+				Parent_View 	@53
+				location   	(217, -559)
+				stereotype 	TRUE
+				icon_style 	"Icon"
+				quidu      	"513FAF670078"
+				client     	@53
+				supplier   	@40
+				line_style 	0)))
+		    (object UseCaseView "Use Case View::Создать карточку" @57
+			location   	(756, 1402)
+			label      	(object ItemLabel
+			    Parent_View 	@57
+			    location   	(756, 1540)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	631
+			    justify    	0
+			    label      	"Создать карточку")
+			stereotype 	TRUE
+			icon_style 	"Icon"
+			quidu      	"515E83C7031B"
+			height     	118
+			autoResize 	TRUE)
+		    (object AssociationViewNew "$UNNAMED$27" @58
+			location   	(1082, 1505)
+			stereotype 	(object SegLabel @59
+			    Parent_View 	@58
+			    location   	(1135, 1537)
+			    font       	(object Font
+				size       	10
+				charSet    	204)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    anchor     	10
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	450
+			    justify    	0
+			    label      	"<<include>>"
+			    pctDist    	1.000000
+			    height     	32
+			    orientation 	1)
+			icon_style 	"Icon"
+			quidu      	"515E840D030B"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$29" @60
+				Parent_View 	@58
+				location   	(-121, -64)
+				label      	(object SegLabel @61
+				    Parent_View 	@60
+				    location   	(1101, 1468)
+				    stereotype 	TRUE
+				    icon_style 	"Icon"
+				    hidden     	TRUE
+				    anchor     	1
+				    anchor_loc 	1
+				    nlines     	1
+				    max_width  	450
+				    justify    	0
+				    label      	""
+				    pctDist    	0.000000
+				    height     	42
+				    orientation 	1)
+				stereotype 	TRUE
+				icon_style 	"Icon"
+				quidu      	"515E840E020C"
+				client     	@58
+				supplier   	@57
+				line_style 	0)
+			    (object RoleView "$UNNAMED$28" @62
+				Parent_View 	@58
+				location   	(-121, -64)
+				label      	(object SegLabel @63
+				    Parent_View 	@62
+				    location   	(1095, 1466)
+				    stereotype 	TRUE
+				    icon_style 	"Icon"
+				    hidden     	TRUE
+				    anchor     	1
+				    anchor_loc 	1
+				    nlines     	1
+				    max_width  	450
+				    justify    	0
+				    label      	""
+				    pctDist    	0.000000
+				    height     	42
+				    orientation 	0)
+				stereotype 	TRUE
+				icon_style 	"Icon"
+				quidu      	"515E840E020B"
+				client     	@58
+				supplier   	@39
+				line_style 	0)))
+		    (object ClassView "Class" "Use Case View::Пользователь" @64
+			ShowCompartmentStereotypes 	TRUE
+			IncludeAttribute 	TRUE
+			IncludeOperation 	TRUE
+			location   	(230, 1212)
+			label      	(object ItemLabel
+			    Parent_View 	@64
+			    location   	(230, 1372)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	325
+			    justify    	0
+			    label      	"Пользователь")
+			stereotype 	FALSE
+			icon       	"Actor"
+			icon_style 	"Icon"
+			quidu      	"513ED522030F"
+			annotation 	8
+			autoResize 	TRUE)
+		    (object AssociationViewNew "$UNNAMED$0" @65
+			location   	(394, 1067)
+			stereotype 	TRUE
+			icon_style 	"Icon"
+			quidu      	"513FADB800EA"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$1" @66
+				Parent_View 	@65
+				location   	(-317, 230)
+				stereotype 	TRUE
+				icon_style 	"Icon"
+				quidu      	"513FADB8035B"
+				client     	@65
+				supplier   	@40
+				line_style 	0
+				label      	(object SegLabel @67
+				    Parent_View 	@66
+				    location   	(430, 1108)
+				    font       	(object Font
+					size       	10
+					charSet    	204)
+				    stereotype 	TRUE
+				    icon_style 	"Icon"
+				    anchor     	2
+				    anchor_loc 	1
+				    nlines     	1
+				    max_width  	15
+				    justify    	0
+				    label      	"+1..*"
+				    pctDist    	0.000000
+				    height     	54
+				    orientation 	1))
+			    (object RoleView "$UNNAMED$2" @68
+				Parent_View 	@65
+				location   	(-317, 230)
+				stereotype 	TRUE
+				icon_style 	"Icon"
+				quidu      	"513FADB8035C"
+				client     	@65
+				supplier   	@64
+				line_style 	0
+				label      	(object SegLabel @69
+				    Parent_View 	@68
+				    location   	(428, 1109)
+				    font       	(object Font
+					size       	10
+					charSet    	204)
+				    stereotype 	TRUE
+				    icon_style 	"Icon"
+				    anchor     	2
+				    anchor_loc 	1
+				    nlines     	1
+				    max_width  	15
+				    justify    	0
+				    label      	"+*"
+				    pctDist    	0.000000
+				    height     	54
+				    orientation 	0))))
+		    (object AssociationViewNew "$UNNAMED$24" @70
+			location   	(466, 1295)
+			stereotype 	TRUE
+			icon_style 	"Icon"
+			quidu      	"515E83D5029D"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$25" @71
+				Parent_View 	@70
+				location   	(236, 83)
+				stereotype 	TRUE
+				icon_style 	"Icon"
+				quidu      	"515E83D60084"
+				client     	@70
+				supplier   	@57
+				line_style 	0
+				label      	(object SegLabel @72
+				    Parent_View 	@71
+				    location   	(449, 1346)
+				    font       	(object Font
+					size       	10
+					charSet    	204)
+				    stereotype 	TRUE
+				    icon_style 	"Icon"
+				    anchor     	2
+				    anchor_loc 	1
+				    nlines     	1
+				    max_width  	15
+				    justify    	0
+				    label      	"+1..*"
+				    pctDist    	0.000000
+				    height     	54
+				    orientation 	1))
+			    (object RoleView "$UNNAMED$26" @73
+				Parent_View 	@70
+				location   	(236, 83)
+				stereotype 	TRUE
+				icon_style 	"Icon"
+				quidu      	"515E83D60085"
+				client     	@70
+				supplier   	@64
+				line_style 	0)))
+		    (object UseCaseView "Use Case View::Сформировать отчет" @74
+			location   	(1340, 1910)
+			label      	(object ItemLabel
+			    Parent_View 	@74
+			    location   	(1340, 2048)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	631
+			    justify    	0
+			    label      	"Сформировать отчет")
+			stereotype 	TRUE
+			icon_style 	"Icon"
+			quidu      	"515F1E190327"
+			height     	118
+			autoResize 	TRUE)
+		    (object UseCaseView "Use Case View::Выбрать объект отчета" @75
+			location   	(1345, 2218)
+			label      	(object ItemLabel
+			    Parent_View 	@75
+			    location   	(1345, 2356)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	631
+			    justify    	0
+			    label      	"Выбрать объект отчета")
+			stereotype 	TRUE
+			icon_style 	"Icon"
+			quidu      	"515F1DC00046"
+			height     	118
+			autoResize 	TRUE)
+		    (object UseCaseView "Use Case View::Задать параметры отчета" @76
+			location   	(1363, 2481)
+			label      	(object ItemLabel
+			    Parent_View 	@76
+			    location   	(1363, 2619)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	631
+			    justify    	0
+			    label      	"Задать параметры отчета")
+			stereotype 	TRUE
+			icon_style 	"Icon"
+			quidu      	"515F1DDE0128"
+			height     	118
+			autoResize 	TRUE)
+		    (object UseCaseView "Use Case View::Создать отчет" @77
+			location   	(489, 2327)
+			label      	(object ItemLabel
+			    Parent_View 	@77
+			    location   	(489, 2465)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	631
+			    justify    	0
+			    label      	"Создать отчет")
+			stereotype 	TRUE
+			icon_style 	"Icon"
+			quidu      	"515E878B0074"
+			height     	118
+			autoResize 	TRUE)
+		    (object AssociationViewNew "$UNNAMED$45" @78
+			location   	(372, 1834)
+			stereotype 	TRUE
+			icon_style 	"Icon"
+			quidu      	"515F215D03CA"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$46" @79
+				Parent_View 	@78
+				location   	(142, 622)
+				stereotype 	TRUE
+				icon_style 	"Icon"
+				quidu      	"515F215E0272"
+				client     	@78
+				supplier   	@77
+				line_style 	0)
+			    (object RoleView "$UNNAMED$47" @80
+				Parent_View 	@78
+				location   	(142, 622)
+				stereotype 	TRUE
+				icon_style 	"Icon"
+				quidu      	"515F215E0273"
+				client     	@78
+				supplier   	@64
+				line_style 	0)))
+		    (object AssociationViewNew "$UNNAMED$54" @81
+			location   	(847, 2149)
+			stereotype 	(object SegLabel @82
+			    Parent_View 	@81
+			    location   	(883, 2105)
+			    font       	(object Font
+				size       	10
+				charSet    	204)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    anchor     	10
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	450
+			    justify    	0
+			    label      	"<<include>>"
+			    pctDist    	1.000000
+			    height     	44
+			    orientation 	0)
+			icon_style 	"Icon"
+			quidu      	"515F21690373"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$55" @83
+				Parent_View 	@81
+				location   	(181, 347)
+				stereotype 	TRUE
+				icon_style 	"Icon"
+				quidu      	"515F216A01FC"
+				client     	@81
+				supplier   	@74
+				line_style 	0)
+			    (object RoleView "$UNNAMED$56" @84
+				Parent_View 	@81
+				location   	(181, 347)
+				stereotype 	TRUE
+				icon_style 	"Icon"
+				quidu      	"515F216A01FD"
+				client     	@81
+				supplier   	@77
+				line_style 	0)))
+		    (object AssociationViewNew "$UNNAMED$48" @85
+			location   	(915, 2269)
+			stereotype 	(object SegLabel @86
+			    Parent_View 	@85
+			    location   	(983, 2246)
+			    font       	(object Font
+				size       	10
+				charSet    	204)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    anchor     	10
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	450
+			    justify    	0
+			    label      	"<<include>>"
+			    pctDist    	1.000000
+			    height     	23
+			    orientation 	0)
+			icon_style 	"Icon"
+			quidu      	"515F216402BB"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$49" @87
+				Parent_View 	@85
+				location   	(249, 467)
+				stereotype 	TRUE
+				icon_style 	"Icon"
+				quidu      	"515F21650115"
+				client     	@85
+				supplier   	@75
+				line_style 	0)
+			    (object RoleView "$UNNAMED$50" @88
+				Parent_View 	@85
+				location   	(249, 467)
+				stereotype 	TRUE
+				icon_style 	"Icon"
+				quidu      	"515F21650116"
+				client     	@85
+				supplier   	@77
+				line_style 	0)))
+		    (object AssociationViewNew "$UNNAMED$57" @89
+			location   	(924, 2400)
+			stereotype 	(object SegLabel @90
+			    Parent_View 	@89
+			    location   	(997, 2411)
+			    font       	(object Font
+				size       	10
+				charSet    	204)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    anchor     	10
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	450
+			    justify    	0
+			    label      	"<<include>>"
+			    pctDist    	1.000000
+			    height     	11
+			    orientation 	1)
+			icon_style 	"Icon"
+			quidu      	"515F216B03DF"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$58" @91
+				Parent_View 	@89
+				location   	(258, 598)
+				stereotype 	TRUE
+				icon_style 	"Icon"
+				quidu      	"515F216C02C5"
+				client     	@89
+				supplier   	@76
+				line_style 	0)
+			    (object RoleView "$UNNAMED$59" @92
+				Parent_View 	@89
+				location   	(258, 598)
+				stereotype 	TRUE
+				icon_style 	"Icon"
+				quidu      	"515F216C02C6"
+				client     	@89
+				supplier   	@77
+				line_style 	0)))
+		    (object ClassView "Class" "Use Case View::Окно отчета" @93
+			ShowCompartmentStereotypes 	TRUE
+			IncludeAttribute 	TRUE
+			IncludeOperation 	TRUE
+			location   	(2262, 2345)
+			label      	(object ItemLabel
+			    Parent_View 	@93
+			    location   	(2261, 2453)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	229
+			    justify    	0
+			    label      	"Окно отчета")
+			stereotype 	FALSE
+			icon       	"Interface"
+			icon_style 	"Icon"
+			quidu      	"515F21790396"
+			width      	58
+			height     	58
+			annotation 	8
+			autoResize 	TRUE)
+		    (object AssociationViewNew "$UNNAMED$60" @94
+			location   	(1908, 2176)
+			stereotype 	TRUE
+			icon_style 	"Icon"
+			quidu      	"515F218F0116"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$61" @95
+				Parent_View 	@94
+				location   	(260, 284)
+				stereotype 	TRUE
+				icon_style 	"Icon"
+				quidu      	"515F2190000C"
+				client     	@94
+				supplier   	@93
+				line_style 	0)
+			    (object RoleView "$UNNAMED$62" @96
+				Parent_View 	@94
+				location   	(260, 284)
+				stereotype 	TRUE
+				icon_style 	"Icon"
+				quidu      	"515F2190000D"
+				client     	@94
+				supplier   	@74
+				line_style 	0)))
+		    (object AssociationViewNew "$UNNAMED$63" @97
+			location   	(1843, 2284)
+			stereotype 	TRUE
+			icon_style 	"Icon"
+			quidu      	"515F219103B4"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$64" @98
+				Parent_View 	@97
+				location   	(154, 79)
+				stereotype 	TRUE
+				icon_style 	"Icon"
+				quidu      	"515F219201DF"
+				client     	@97
+				supplier   	@93
+				line_style 	0)
+			    (object RoleView "$UNNAMED$65" @99
+				Parent_View 	@97
+				location   	(154, 79)
+				stereotype 	TRUE
+				icon_style 	"Icon"
+				quidu      	"515F219201E0"
+				client     	@97
+				supplier   	@75
+				line_style 	0)))
+		    (object AssociationViewNew "$UNNAMED$66" @100
+			location   	(1852, 2404)
+			stereotype 	TRUE
+			icon_style 	"Icon"
+			quidu      	"515F21960297"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$67" @101
+				Parent_View 	@100
+				location   	(462, -95)
+				stereotype 	TRUE
+				icon_style 	"Icon"
+				quidu      	"515F219701AC"
+				client     	@100
+				supplier   	@93
+				line_style 	0)
+			    (object RoleView "$UNNAMED$68" @102
+				Parent_View 	@100
+				location   	(462, -95)
+				stereotype 	TRUE
+				icon_style 	"Icon"
+				quidu      	"515F219701AD"
+				client     	@100
+				supplier   	@76
+				line_style 	0)))
+		    (object UseCaseView "Use Case View::Ввбрать вид отчета" @103
+			location   	(1336, 2812)
+			label      	(object ItemLabel
+			    Parent_View 	@103
+			    location   	(1336, 2950)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	631
+			    justify    	0
+			    label      	"Ввбрать вид отчета")
+			stereotype 	TRUE
+			icon_style 	"Icon"
+			quidu      	"515F1DB40115"
+			height     	118
+			autoResize 	TRUE)
+		    (object AssociationViewNew "$UNNAMED$51" @104
+			location   	(944, 2586)
+			stereotype 	(object SegLabel @105
+			    Parent_View 	@104
+			    location   	(953, 2594)
+			    font       	(object Font
+				size       	10
+				charSet    	204)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    anchor     	10
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	450
+			    justify    	0
+			    label      	"<<include>>"
+			    pctDist    	0.000000
+			    height     	8
+			    orientation 	1)
+			icon_style 	"Icon"
+			quidu      	"515F2166023D"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$52" @106
+				Parent_View 	@104
+				location   	(278, 784)
+				stereotype 	TRUE
+				icon_style 	"Icon"
+				quidu      	"515F216700A6"
+				client     	@104
+				supplier   	@103
+				line_style 	0)
+			    (object RoleView "$UNNAMED$53" @107
+				Parent_View 	@104
+				location   	(278, 784)
+				stereotype 	TRUE
+				icon_style 	"Icon"
+				quidu      	"515F216700A7"
+				client     	@104
+				supplier   	@77
+				line_style 	0)))
+		    (object AssociationViewNew "$UNNAMED$69" @108
+			location   	(1811, 2568)
+			stereotype 	TRUE
+			icon_style 	"Icon"
+			quidu      	"515F21990063"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$70" @109
+				Parent_View 	@108
+				location   	(960, 103)
+				stereotype 	TRUE
+				icon_style 	"Icon"
+				quidu      	"515F219903BE"
+				client     	@108
+				supplier   	@93
+				line_style 	0)
+			    (object RoleView "$UNNAMED$71" @110
+				Parent_View 	@108
+				location   	(960, 103)
+				stereotype 	TRUE
+				icon_style 	"Icon"
+				quidu      	"515F219903BF"
+				client     	@108
+				supplier   	@103
+				line_style 	0)))))
+	    (object InteractionDiagram "Создание отчета"
+		mechanism_ref 	@1
+		quid       	"5168F284014A"
+		title      	"Создание отчета"
+		zoom       	90
+		max_height 	28350
+		max_width  	21600
+		origin_x   	62
+		origin_y   	1249
+		items      	(list diagram_item_list
+		    (object InterObjView "$UNNAMED$72" @111
+			location   	(469, 225)
+			font       	(object Font
+			    charSet    	204
+			    underline  	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@111
+			    location   	(469, 225)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	282
+			    justify    	0
+			    label      	"")
+			stereotype 	TRUE
+			icon_style 	"Icon"
+			quidu      	"5168F2940294"
+			width      	300
+			height     	3332
+			icon_height 	162
+			icon_width 	120
+			annotation 	1
+			Focus_Of_Control 	(object Focus_Of_Control "" @112
+			    location   	(469, 539)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    InterObjView 	@111
+			    height     	120
+			    y_coord    	60
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @113
+			    location   	(469, 1022)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    InterObjView 	@111
+			    height     	249
+			    y_coord    	189
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @114
+			    location   	(469, 1903)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    InterObjView 	@111
+			    height     	120
+			    y_coord    	60
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @115
+			    location   	(469, 2840)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    InterObjView 	@111
+			    height     	120
+			    y_coord    	60
+			    Nested     	FALSE))
+		    (object InterObjView "Form for work with report" @116
+			location   	(1027, 225)
+			font       	(object Font
+			    charSet    	204
+			    underline  	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@116
+			    location   	(1027, 225)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	574
+			    justify    	0
+			    label      	"Form for work with report")
+			stereotype 	TRUE
+			icon_style 	"Icon"
+			quidu      	"5168F2E700BC"
+			width      	592
+			height     	3332
+			icon_height 	0
+			icon_width 	0
+			annotation 	1
+			Focus_Of_Control 	(object Focus_Of_Control "" @117
+			    location   	(1027, 539)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    InterObjView 	@116
+			    height     	60
+			    y_coord    	0
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @118
+			    location   	(1027, 704)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    InterObjView 	@116
+			    height     	120
+			    y_coord    	60
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @119
+			    location   	(1027, 937)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    InterObjView 	@116
+			    height     	60
+			    y_coord    	0
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @120
+			    location   	(1027, 1151)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    InterObjView 	@116
+			    height     	60
+			    y_coord    	0
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @121
+			    location   	(1027, 1303)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    InterObjView 	@116
+			    height     	120
+			    y_coord    	60
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @122
+			    location   	(1027, 1757)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    InterObjView 	@116
+			    height     	60
+			    y_coord    	0
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @123
+			    location   	(1027, 1903)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    InterObjView 	@116
+			    height     	60
+			    y_coord    	0
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @124
+			    location   	(1027, 2099)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    InterObjView 	@116
+			    height     	120
+			    y_coord    	60
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @125
+			    location   	(1027, 2646)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    InterObjView 	@116
+			    height     	60
+			    y_coord    	0
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @126
+			    location   	(1027, 2840)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    InterObjView 	@116
+			    height     	60
+			    y_coord    	0
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @127
+			    location   	(1027, 3073)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    InterObjView 	@116
+			    height     	120
+			    y_coord    	60
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @128
+			    location   	(1027, 3347)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    InterObjView 	@116
+			    height     	60
+			    y_coord    	0
+			    Nested     	FALSE))
+		    (object InterObjView "List of cards" @129
+			location   	(2098, 225)
+			font       	(object Font
+			    charSet    	204
+			    underline  	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@129
+			    location   	(2098, 225)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	388
+			    justify    	0
+			    label      	"List of cards")
+			stereotype 	TRUE
+			icon_style 	"Icon"
+			quidu      	"5168F778026C"
+			width      	406
+			height     	3332
+			icon_height 	0
+			icon_width 	0
+			annotation 	1
+			Focus_Of_Control 	(object Focus_Of_Control "" @130
+			    location   	(2098, 1303)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    InterObjView 	@129
+			    height     	60
+			    y_coord    	0
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @131
+			    location   	(2098, 1518)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    InterObjView 	@129
+			    height     	120
+			    y_coord    	60
+			    Nested     	FALSE))
+		    (object InterObjView "Card" @132
+			location   	(2638, 225)
+			font       	(object Font
+			    charSet    	204
+			    underline  	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@132
+			    location   	(2638, 225)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	282
+			    justify    	0
+			    label      	"Card")
+			stereotype 	TRUE
+			icon_style 	"Icon"
+			quidu      	"5168F9C602E9"
+			width      	300
+			height     	3332
+			icon_height 	0
+			icon_width 	0
+			annotation 	1
+			Focus_Of_Control 	(object Focus_Of_Control "" @133
+			    location   	(2638, 1518)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    InterObjView 	@132
+			    height     	60
+			    y_coord    	0
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @134
+			    location   	(2638, 1747)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    InterObjView 	@132
+			    height     	130
+			    y_coord    	70
+			    Nested     	FALSE))
+		    (object InterObjView "Report" @135
+			location   	(3156, 225)
+			font       	(object Font
+			    charSet    	204
+			    underline  	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@135
+			    location   	(3156, 225)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	282
+			    justify    	0
+			    label      	"Report")
+			stereotype 	TRUE
+			icon_style 	"Icon"
+			quidu      	"5169C1A3002B"
+			width      	300
+			height     	3332
+			icon_height 	0
+			icon_width 	0
+			annotation 	1
+			Focus_Of_Control 	(object Focus_Of_Control "" @136
+			    location   	(3156, 2099)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    InterObjView 	@135
+			    height     	60
+			    y_coord    	0
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @137
+			    location   	(3156, 2392)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    InterObjView 	@135
+			    height     	120
+			    y_coord    	60
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @138
+			    location   	(3156, 2646)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    InterObjView 	@135
+			    height     	120
+			    y_coord    	60
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @139
+			    location   	(3156, 3073)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    InterObjView 	@135
+			    height     	60
+			    y_coord    	0
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @140
+			    location   	(3156, 3347)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    InterObjView 	@135
+			    height     	120
+			    y_coord    	60
+			    Nested     	FALSE))
+		    (object InterObjView "List of reports" @141
+			location   	(1557, 225)
+			font       	(object Font
+			    charSet    	204
+			    underline  	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@141
+			    location   	(1557, 225)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	336
+			    justify    	0
+			    label      	"List of reports")
+			stereotype 	TRUE
+			icon_style 	"Icon"
+			quidu      	"5169CAC900BD"
+			width      	354
+			height     	3332
+			icon_height 	0
+			icon_width 	0
+			annotation 	1
+			Focus_Of_Control 	(object Focus_Of_Control "" @142
+			    location   	(1557, 704)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    InterObjView 	@141
+			    height     	60
+			    y_coord    	0
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @143
+			    location   	(1557, 859)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    InterObjView 	@141
+			    height     	198
+			    y_coord    	138
+			    Nested     	FALSE))
+		    (object InterMessView "" @144
+			location   	(0, 539)
+			label      	(object SegLabel @145
+			    Parent_View 	@144
+			    location   	(485, 488)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    quidu      	"5168F8D203BD"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	371
+			    justify    	0
+			    label      	"Begin_to_work( )"
+			    pctDist    	0.000000
+			    height     	52
+			    orientation 	0)
+			stereotype 	TRUE
+			icon_style 	"Icon"
+			client     	@111
+			supplier   	@116
+			Focus_Src  	@112
+			Focus_Entry 	@117
+			origin     	(485, 539)
+			terminus   	(1011, 539)
+			ordinal    	0)
+		    (object InterMessView "" @146
+			location   	(0, 1303)
+			label      	(object SegLabel @147
+			    Parent_View 	@146
+			    location   	(1239, 1257)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    quidu      	"5168F92C01B4"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	545
+			    justify    	0
+			    label      	"To_show_list_of_cards( )"
+			    pctDist    	0.189605
+			    height     	47
+			    orientation 	0)
+			stereotype 	TRUE
+			icon_style 	"Icon"
+			client     	@116
+			supplier   	@129
+			Focus_Src  	@121
+			Focus_Entry 	@130
+			origin     	(1043, 1303)
+			terminus   	(2082, 1303)
+			ordinal    	4)
+		    (object InterMessView "" @148
+			location   	(0, 2099)
+			label      	(object SegLabel @149
+			    Parent_View 	@148
+			    location   	(1323, 2049)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    quidu      	"5169C53A01C9"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	723
+			    justify    	0
+			    label      	"To_add_cards_to_report(Integer)"
+			    pctDist    	0.133524
+			    height     	50
+			    orientation 	0)
+			stereotype 	TRUE
+			icon_style 	"Icon"
+			client     	@116
+			supplier   	@135
+			Focus_Src  	@124
+			Focus_Entry 	@136
+			origin     	(1043, 2099)
+			terminus   	(3140, 2099)
+			ordinal    	8)
+		    (object InterMessView "" @150
+			location   	(0, 2646)
+			label      	(object SegLabel @151
+			    Parent_View 	@150
+			    location   	(1360, 2586)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    quidu      	"5169C5A40151"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	601
+			    justify    	0
+			    label      	"To_show_cards_in_report()"
+			    pctDist    	0.848832
+			    height     	60
+			    orientation 	1)
+			stereotype 	TRUE
+			icon_style 	"Icon"
+			client     	@135
+			supplier   	@116
+			Focus_Src  	@138
+			Focus_Entry 	@125
+			origin     	(3140, 2646)
+			terminus   	(1043, 2646)
+			ordinal    	10)
+		    (object SelfMessView "" @152
+			location   	(0, 2392)
+			label      	(object SegLabel @153
+			    Parent_View 	@152
+			    location   	(3172, 2348)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    quidu      	"5169C629022E"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	493
+			    justify    	0
+			    label      	"To_complete_report()"
+			    pctDist    	0.000000
+			    height     	45
+			    orientation 	0)
+			stereotype 	TRUE
+			icon_style 	"Icon"
+			client     	@135
+			supplier   	@135
+			Focus_Src  	@137
+			origin     	(3172, 2392)
+			terminus   	(3322, 2392)
+			ordinal    	9)
+		    (object InterMessView "" @154
+			location   	(0, 704)
+			label      	(object SegLabel @155
+			    Parent_View 	@154
+			    location   	(1299, 663)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    quidu      	"5169CB290163"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	493
+			    justify    	0
+			    label      	"Show_list_of_reports()"
+			    pctDist    	0.514056
+			    height     	41
+			    orientation 	0)
+			stereotype 	TRUE
+			icon_style 	"Icon"
+			client     	@116
+			supplier   	@141
+			Focus_Src  	@118
+			Focus_Entry 	@142
+			origin     	(1043, 704)
+			terminus   	(1541, 704)
+			ordinal    	1)
+		    (object InterMessView "" @156
+			location   	(0, 937)
+			label      	(object SegLabel @157
+			    Parent_View 	@156
+			    location   	(1218, 892)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    quidu      	"5169CB53027C"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	351
+			    justify    	0
+			    label      	"Show_kind_of_reports()"
+			    pctDist    	0.648594
+			    height     	45
+			    orientation 	1)
+			stereotype 	TRUE
+			icon_style 	"Icon"
+			client     	@141
+			supplier   	@116
+			Focus_Src  	@143
+			Focus_Entry 	@119
+			origin     	(1541, 937)
+			terminus   	(1043, 937)
+			ordinal    	2)
+		    (object InterMessView "" @158
+			location   	(0, 1151)
+			label      	(object SegLabel @159
+			    Parent_View 	@158
+			    location   	(485, 1117)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    quidu      	"5169CBBC00AA"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	427
+			    justify    	0
+			    label      	"To_select_kind_of_reports()"
+			    pctDist    	0.000000
+			    height     	34
+			    orientation 	0)
+			stereotype 	TRUE
+			icon_style 	"Icon"
+			client     	@111
+			supplier   	@116
+			Focus_Src  	@113
+			Focus_Entry 	@120
+			origin     	(485, 1151)
+			terminus   	(1011, 1151)
+			ordinal    	3)
+		    (object InterMessView "" @160
+			location   	(0, 1903)
+			label      	(object SegLabel @161
+			    Parent_View 	@160
+			    location   	(730, 1860)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    quidu      	"5169CD410210"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	403
+			    justify    	0
+			    label      	"To_select_cards()"
+			    pctDist    	0.465779
+			    height     	43
+			    orientation 	0)
+			stereotype 	TRUE
+			icon_style 	"Icon"
+			client     	@111
+			supplier   	@116
+			Focus_Src  	@114
+			Focus_Entry 	@123
+			origin     	(485, 1903)
+			terminus   	(1011, 1903)
+			ordinal    	7)
+		    (object InterMessView "" @162
+			location   	(0, 2840)
+			label      	(object SegLabel @163
+			    Parent_View 	@162
+			    location   	(747, 2790)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    quidu      	"5169CE0402AC"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	507
+			    justify    	0
+			    label      	"To_generatea_report()"
+			    pctDist    	0.498099
+			    height     	50
+			    orientation 	0)
+			stereotype 	TRUE
+			icon_style 	"Icon"
+			client     	@111
+			supplier   	@116
+			Focus_Src  	@115
+			Focus_Entry 	@126
+			origin     	(485, 2840)
+			terminus   	(1011, 2840)
+			ordinal    	11)
+		    (object InterMessView "" @164
+			location   	(0, 3073)
+			label      	(object SegLabel @165
+			    Parent_View 	@164
+			    location   	(1279, 3028)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    quidu      	"5169D2150228"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	434
+			    justify    	0
+			    label      	"To_create_report( )"
+			    pctDist    	0.112542
+			    height     	45
+			    orientation 	0)
+			stereotype 	TRUE
+			icon_style 	"Icon"
+			client     	@116
+			supplier   	@135
+			Focus_Src  	@127
+			Focus_Entry 	@139
+			origin     	(1043, 3073)
+			terminus   	(3140, 3073)
+			ordinal    	12)
+		    (object InterMessView "" @166
+			location   	(0, 3347)
+			label      	(object SegLabel @167
+			    Parent_View 	@166
+			    location   	(1289, 3302)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    quidu      	"5169D22403A4"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	420
+			    justify    	0
+			    label      	"To_make_report()"
+			    pctDist    	0.882690
+			    height     	45
+			    orientation 	1)
+			stereotype 	TRUE
+			icon_style 	"Icon"
+			client     	@135
+			supplier   	@116
+			Focus_Src  	@140
+			Focus_Entry 	@128
+			origin     	(3140, 3347)
+			terminus   	(1043, 3347)
+			ordinal    	13)
+		    (object InterMessView "" @168
+			location   	(0, 1518)
+			label      	(object SegLabel @169
+			    Parent_View 	@168
+			    location   	(2303, 1478)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    quidu      	"5169D2570280"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	361
+			    justify    	0
+			    label      	"To_show_card( )"
+			    pctDist    	0.372047
+			    height     	40
+			    orientation 	0)
+			stereotype 	TRUE
+			icon_style 	"Icon"
+			client     	@129
+			supplier   	@132
+			Focus_Src  	@131
+			Focus_Entry 	@133
+			origin     	(2114, 1518)
+			terminus   	(2622, 1518)
+			ordinal    	5)
+		    (object InterMessView "" @170
+			location   	(0, 1757)
+			label      	(object SegLabel @171
+			    Parent_View 	@170
+			    location   	(1317, 1714)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    quidu      	"5174319101C6"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	385
+			    justify    	0
+			    label      	"To_show_cards()"
+			    pctDist    	0.826472
+			    height     	43
+			    orientation 	1)
+			stereotype 	TRUE
+			icon_style 	"Icon"
+			client     	@132
+			supplier   	@116
+			Focus_Src  	@134
+			Focus_Entry 	@122
+			origin     	(2622, 1757)
+			terminus   	(1043, 1757)
+			ordinal    	6)))))
+    root_category 	(object Class_Category "Logical View"
+	quid       	"513ED32A0281"
+	exportControl 	"Public"
+	global     	TRUE
+	subsystem  	"Component View"
+	quidu      	"513ED32A0283"
+	logical_models 	(list unit_reference_list
+	    (object Class_Category "Entities"
+		quid       	"517755BE0002"
+		exportControl 	"Public"
+		logical_models 	(list unit_reference_list
+		    (object Class "List of reports"
+			quid       	"5177562703DB"
+			operations 	(list Operations
+			    (object Operation "Show_list_of_reports()"
+				quid       	"517756D50298"
+				parameters 	(list Parameters
+				    (object Parameter "argname"))
+				result     	"return"
+				concurrency 	"Sequential"
+				opExportControl 	"Public"
+				uid        	0)))
+		    (object Class "List of cards"
+			quid       	"5177562F017A"
+			operations 	(list Operations
+			    (object Operation "To_show_list_of_cards"
+				quid       	"517757290360"
+				result     	"List of cards"
+				concurrency 	"Sequential"
+				opExportControl 	"Public"
+				uid        	0)))
+		    (object Class "Card"
+			quid       	"517756350272"
+			operations 	(list Operations
+			    (object Operation "To_show_card"
+				quid       	"5177573E002F"
+				result     	"Boolean"
+				concurrency 	"Sequential"
+				opExportControl 	"Public"
+				uid        	0)))
+		    (object Class "Report"
+			quid       	"5177563B0353"
+			operations 	(list Operations
+			    (object Operation "To_add_cards_to_report"
+				quid       	"5177575900A7"
+				parameters 	(list Parameters
+				    (object Parameter "N_cards"
+					type       	"Integer"))
+				result     	"return"
+				concurrency 	"Sequential"
+				opExportControl 	"Public"
+				uid        	0)
+			    (object Operation "To_complete_report"
+				quid       	"5177576501CA"
+				result     	"Integer"
+				concurrency 	"Sequential"
+				opExportControl 	"Private"
+				uid        	0)
+			    (object Operation "To_create_report"
+				quid       	"5177578102E8"
+				result     	"Report"
+				concurrency 	"Sequential"
+				opExportControl 	"Public"
+				uid        	0))))
+		logical_presentations 	(list unit_reference_list))
+	    (object Class_Category "Boundaries"
+		quid       	"517755D5024D"
+		exportControl 	"Public"
+		logical_models 	(list unit_reference_list
+		    (object Class "Form for work with report"
+			quid       	"517756140101"
+			operations 	(list Operations
+			    (object Operation "Begin_to_work"
+				quid       	"5177569801B9"
+				result     	"Integer"
+				concurrency 	"Sequential"
+				opExportControl 	"Public"
+				uid        	0)
+			    (object Operation "To_select_kind_of_reports()"
+				quid       	"5177569E0029"
+				parameters 	(list Parameters
+				    (object Parameter "argname"))
+				result     	"return"
+				concurrency 	"Sequential"
+				opExportControl 	"Public"
+				uid        	0)
+			    (object Operation "To_select_cards()"
+				quid       	"517756AB0140"
+				parameters 	(list Parameters
+				    (object Parameter "argname"))
+				result     	"return"
+				concurrency 	"Sequential"
+				opExportControl 	"Public"
+				uid        	0)
+			    (object Operation "To_select_cards()"
+				quid       	"517756B40118"
+				parameters 	(list Parameters
+				    (object Parameter "argname"))
+				result     	"return"
+				concurrency 	"Sequential"
+				opExportControl 	"Public"
+				uid        	0)
+			    (object Operation "To_generatea_report()"
+				quid       	"517756C000B0"
+				parameters 	(list Parameters
+				    (object Parameter "argname"))
+				result     	"return"
+				concurrency 	"Sequential"
+				opExportControl 	"Public"
+				uid        	0)
+			    (object Operation "Show_kind_of_reports()"
+				quid       	"5177570C0127"
+				parameters 	(list Parameters
+				    (object Parameter "argname"))
+				result     	"return"
+				concurrency 	"Sequential"
+				opExportControl 	"Public"
+				uid        	0)
+			    (object Operation "To_select_kind_of_reports()"
+				quid       	"5177571C03D8"
+				parameters 	(list Parameters
+				    (object Parameter "argname"))
+				result     	"return"
+				concurrency 	"Sequential"
+				opExportControl 	"Public"
+				uid        	0)
+			    (object Operation "To_show_cards()"
+				quid       	"517757480119"
+				parameters 	(list Parameters
+				    (object Parameter "argname"))
+				result     	"return"
+				concurrency 	"Sequential"
+				opExportControl 	"Public"
+				uid        	0)
+			    (object Operation "To_show_cards_in_report()"
+				quid       	"5177576F03BD"
+				parameters 	(list Parameters
+				    (object Parameter "argname"))
+				result     	"return"
+				concurrency 	"Sequential"
+				opExportControl 	"Public"
+				uid        	0)
+			    (object Operation "To_make_report()"
+				quid       	"5177578F0008"
+				parameters 	(list Parameters
+				    (object Parameter "argname"))
+				result     	"return"
+				concurrency 	"Sequential"
+				opExportControl 	"Public"
+				uid        	0))))
+		logical_presentations 	(list unit_reference_list))
+	    (object Class_Category "Users"
+		quid       	"517755D9028A"
+		exportControl 	"Public"
+		logical_models 	(list unit_reference_list
+		    (object Class "User"
+			quid       	"51775640023C"))
+		logical_presentations 	(list unit_reference_list)))
+	logical_presentations 	(list unit_reference_list
+	    (object ClassDiagram "Создать отчет"
+		quid       	"517755F40091"
+		title      	"Создать отчет"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list
+		    (object ClassView "Class" "Logical View::Entities::List of reports" @172
+			ShowCompartmentStereotypes 	TRUE
+			IncludeAttribute 	TRUE
+			IncludeOperation 	TRUE
+			ShowOperationSignature 	TRUE
+			location   	(390, 215)
+			label      	(object ItemLabel
+			    Parent_View 	@172
+			    location   	(90, 108)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    nlines     	1
+			    max_width  	600
+			    justify    	0
+			    label      	"List of reports")
+			stereotype 	TRUE
+			icon_style 	"Icon"
+			quidu      	"5177562703DB"
+			compartment 	(object Compartment
+			    Parent_View 	@172
+			    location   	(90, 222)
+			    font       	(object Font
+				size       	10
+				charSet    	204)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    anchor     	2
+			    nlines     	2
+			    max_width  	600)
+			width      	618
+			height     	242
+			annotation 	8
+			autoResize 	TRUE)
+		    (object ClassView "Class" "Logical View::Entities::List of cards" @173
+			ShowCompartmentStereotypes 	TRUE
+			IncludeAttribute 	TRUE
+			IncludeOperation 	TRUE
+			ShowOperationSignature 	TRUE
+			location   	(400, 494)
+			label      	(object ItemLabel
+			    Parent_View 	@173
+			    location   	(25, 387)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    nlines     	1
+			    max_width  	750
+			    justify    	0
+			    label      	"List of cards")
+			stereotype 	TRUE
+			icon_style 	"Icon"
+			quidu      	"5177562F017A"
+			compartment 	(object Compartment
+			    Parent_View 	@173
+			    location   	(25, 501)
+			    font       	(object Font
+				size       	10
+				charSet    	204)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    anchor     	2
+			    nlines     	2
+			    max_width  	747)
+			width      	768
+			height     	242
+			annotation 	8
+			autoResize 	TRUE)
+		    (object ClassView "Class" "Logical View::Entities::Card" @174
+			ShowCompartmentStereotypes 	TRUE
+			IncludeAttribute 	TRUE
+			IncludeOperation 	TRUE
+			ShowOperationSignature 	TRUE
+			location   	(325, 756)
+			label      	(object ItemLabel
+			    Parent_View 	@174
+			    location   	(64, 649)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    nlines     	1
+			    max_width  	522
+			    justify    	0
+			    label      	"Card")
+			stereotype 	TRUE
+			icon_style 	"Icon"
+			quidu      	"517756350272"
+			compartment 	(object Compartment
+			    Parent_View 	@174
+			    location   	(64, 763)
+			    font       	(object Font
+				size       	10
+				charSet    	204)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    anchor     	2
+			    nlines     	2
+			    max_width  	519)
+			width      	540
+			height     	242
+			annotation 	8
+			autoResize 	TRUE)
+		    (object ClassView "Class" "Logical View::Entities::Report" @175
+			ShowCompartmentStereotypes 	TRUE
+			IncludeAttribute 	TRUE
+			IncludeOperation 	TRUE
+			ShowOperationSignature 	TRUE
+			location   	(495, 1068)
+			label      	(object ItemLabel
+			    Parent_View 	@175
+			    location   	(9, 911)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    nlines     	1
+			    max_width  	972
+			    justify    	0
+			    label      	"Report")
+			stereotype 	TRUE
+			icon_style 	"Icon"
+			quidu      	"5177563B0353"
+			compartment 	(object Compartment
+			    Parent_View 	@175
+			    location   	(9, 1025)
+			    font       	(object Font
+				size       	10
+				charSet    	204)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    anchor     	2
+			    nlines     	4
+			    max_width  	969)
+			width      	990
+			height     	342
+			annotation 	8
+			autoResize 	TRUE)
+		    (object ClassView "Class" "Logical View::Boundaries::Form for work with report" @176
+			ShowCompartmentStereotypes 	TRUE
+			IncludeAttribute 	TRUE
+			IncludeOperation 	TRUE
+			ShowOperationSignature 	TRUE
+			location   	(1581, 450)
+			label      	(object ItemLabel
+			    Parent_View 	@176
+			    location   	(1234, 118)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    nlines     	1
+			    max_width  	694
+			    justify    	0
+			    label      	"Form for work with report")
+			stereotype 	TRUE
+			icon_style 	"Icon"
+			quidu      	"517756140101"
+			compartment 	(object Compartment
+			    Parent_View 	@176
+			    location   	(1234, 232)
+			    font       	(object Font
+				size       	10
+				charSet    	204)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    anchor     	2
+			    nlines     	11
+			    max_width  	691)
+			width      	712
+			height     	692
+			annotation 	8
+			autoResize 	TRUE)
+		    (object ClassView "Class" "Logical View::Users::User" @177
+			ShowCompartmentStereotypes 	TRUE
+			IncludeAttribute 	TRUE
+			IncludeOperation 	TRUE
+			ShowOperationSignature 	TRUE
+			location   	(1675, 1109)
+			label      	(object ItemLabel
+			    Parent_View 	@177
+			    location   	(1356, 1036)
+			    stereotype 	TRUE
+			    icon_style 	"Icon"
+			    nlines     	1
+			    max_width  	638
+			    justify    	0
+			    label      	"User")
+			stereotype 	TRUE
+			icon_style 	"Icon"
+			quidu      	"51775640023C"
+			width      	656
+			height     	175
+			annotation 	8
+			autoResize 	TRUE)))))
+    root_subsystem 	(object SubSystem "Component View"
+	quid       	"513ED32A0283"
+	physical_models 	(list unit_reference_list)
+	physical_presentations 	(list unit_reference_list
+	    (object Module_Diagram "Main"
+		quid       	"513ED32A0298"
+		title      	"Main"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list))))
+    process_structure 	(object Processes
+	quid       	"513ED32A0284"
+	ProcsNDevs 	(list
+	    (object Process_Diagram "Deployment View"
+		quid       	"513ED32A0286"
+		title      	"Deployment View"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list))))
+    properties 	(object Properties
+	quid       	"513ED32A0285"))
